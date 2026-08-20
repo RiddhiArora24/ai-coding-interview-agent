@@ -563,16 +563,16 @@ app.include_router(
 )
 
 # ============================================================
-# HUGGING FACE / PRODUCTION FRONTEND
+# PRODUCTION FRONTEND
 # Keep this after API route registration.
 # ============================================================
 
 # ============================================================
-# HUGGING FACE / PRODUCTION FRONTEND
+# PRODUCTION FRONTEND
 # Keep this after API route registration.
 # ============================================================
 
-# HUGGING_FACE_FRONTEND_SERVING
-from app.hf_frontend import mount_frontend
+# PRODUCTION_FRONTEND_SERVING
+from app.production_frontend import mount_frontend
 
 mount_frontend(app)

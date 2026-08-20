@@ -1,17 +1,3 @@
----
-title: AI Coding Interview Agent
-emoji: 💻
-colorFrom: purple
-colorTo: blue
-sdk: static
-app_build_command: npm --prefix frontend ci && npm --prefix frontend run build
-app_file: frontend/dist/index.html
-fullWidth: true
-header: mini
-pinned: false
-license: mit
-short_description: AI coding interviews powered by LangChain and LangGraph
----
 <div align="center">
 
 ![Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=AI%20Coding%20Interview%20Agent&fontSize=40&fontColor=fff&animation=fadeIn&desc=Practice.%20Improve.%20Get%20hired.&descAlignY=62&descSize=18)
@@ -25,7 +11,6 @@ short_description: AI coding interviews powered by LangChain and LangGraph
 ![LangGraph](https://img.shields.io/badge/LangGraph-Workflow-8B5CF6)
 ![FAISS](https://img.shields.io/badge/FAISS-Vector%20Search-orange)
 ![JWT](https://img.shields.io/badge/Auth-JWT-black?logo=jsonwebtokens)
-![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Docker%20Space-FFD21E?logo=huggingface&logoColor=black)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 </div>
@@ -61,7 +46,7 @@ An AI-powered mock interview platform where candidates choose a company and diff
 | Auth | JWT + PBKDF2-HMAC-SHA256 |
 | Database | SQLite |
 | Execution | Python `subprocess` / `g++` (C++17) |
-| Deployment | Hugging Face Docker Space |
+| Deployment | Render Docker Web Service |
 
 ## Ã°Å¸â€â€ž Interview Workflow
 
@@ -204,23 +189,44 @@ FASTEMBED_CACHE_DIR=/home/user/.cache/fastembed
 
 For persistent user accounts and interview reports, mount persistent storage at `/data`. Without persistent storage, the SQLite database is not guaranteed to survive Space restarts.
 
-### Deployment Runtime
+### 🚀 Deployment
+
+The complete application is deployed on **Render** as a single Docker web service.
+
+**Live Demo:**  
+https://ai-coding-interview-agent.onrender.com
+
+**API Documentation:**  
+https://ai-coding-interview-agent.onrender.com/docs
 
 ```text
 Browser
-   Ã¢â€ â€œ
-Hugging Face Docker Space :7860
-   Ã¢â€ â€œ
+   ↓
+Render Docker Web Service
+   ↓
 FastAPI
-   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ React production UI
-   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ JWT authentication
-   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ LangGraph workflow
-   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ LangChain + FAISS RAG
-   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ Python/C++ judge
-   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ AI Pipe Ã¢â€ â€™ OpenRouter
+   ├── React production UI
+   ├── JWT authentication
+   ├── LangGraph interview workflow
+   ├── LangChain + FAISS retrieval
+   ├── Python/C++ code judge
+   ├── SQLite report history
+   └── AI Pipe → OpenRouter
 ```
 
-> **Security:** the current candidate-code judge uses local subprocesses. It is intended for controlled/demo use. A hardened public deployment should execute untrusted code in a dedicated isolated sandbox.
+React is built with Vite during the Docker image build and served by FastAPI from the same domain.
+
+### Render Environment Variables
+
+```text
+AIPIPE_API_KEY=<secret>
+JWT_SECRET_KEY=<secret>
+AIPIPE_API_URL=https://aipipe.org/openrouter/v1/chat/completions
+AIPIPE_MODEL=openrouter/free
+FASTEMBED_CACHE_DIR=/home/user/.cache/fastembed
+```
+
+> Render's free service may spin down after inactivity, so the first request after an idle period can take longer.
 
 ## Ã°Å¸â€Å’ API Reference
 
@@ -246,7 +252,7 @@ ai-coding-interview-agent/
  Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ app/
  Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ main.py
  Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ accounts.py
- Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ hf_frontend.py
+ Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ production_frontend.py
  Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ interview_service.py
  Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ judge.py
  Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ aipipe.py

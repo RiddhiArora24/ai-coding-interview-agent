@@ -14,7 +14,7 @@ RUN npm run build
 
 
 # ============================================================
-# Stage 2 - FastAPI / LangChain / LangGraph
+# Stage 2 - Render + FastAPI / LangChain / LangGraph
 # ============================================================
 
 FROM python:3.11-slim-bookworm
