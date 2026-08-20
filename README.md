@@ -1,3 +1,15 @@
+---
+title: AI Coding Interview Agent
+emoji: 💻
+colorFrom: purple
+colorTo: blue
+sdk: docker
+app_port: 7860
+pinned: false
+license: mit
+short_description: AI coding interviews powered by LangChain and LangGraph
+---
+
 <div align="center">
 
 ![Header](https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=200&section=header&text=AI%20Coding%20Interview%20Agent&fontSize=40&fontColor=fff&animation=fadeIn&desc=Practice.%20Improve.%20Get%20hired.&descAlignY=62&descSize=18)
@@ -11,6 +23,7 @@
 ![LangGraph](https://img.shields.io/badge/LangGraph-Workflow-8B5CF6)
 ![FAISS](https://img.shields.io/badge/FAISS-Vector%20Search-orange)
 ![JWT](https://img.shields.io/badge/Auth-JWT-black?logo=jsonwebtokens)
+![Hugging Face](https://img.shields.io/badge/Hugging%20Face-Docker%20Space-FFD21E?logo=huggingface&logoColor=black)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 </div>
@@ -46,6 +59,7 @@ An AI-powered mock interview platform where candidates choose a company and diff
 | Auth | JWT + PBKDF2-HMAC-SHA256 |
 | Database | SQLite |
 | Execution | Python `subprocess` / `g++` (C++17) |
+| Deployment | Hugging Face Docker Space |
 
 ## 🔄 Interview Workflow
 
@@ -101,18 +115,9 @@ graph TD
     AI --> OR[OpenRouter LLM]
 
     B --> DB
-
-    style A fill:#61DAFB,color:#000
-    style B fill:#009688,color:#fff
-    style LG fill:#8b5cf6,color:#fff
-    style LC fill:#1C3C3C,color:#fff
-    style F fill:#f97316,color:#fff
-    style OR fill:#7c3aed,color:#fff
 ```
 
-### Why LangChain?
-
-LangChain owns the RAG layer:
+### LangChain
 
 ```text
 questions.json
@@ -128,11 +133,9 @@ Company + Difficulty Filter
 Top 4 Relevant Questions
 ```
 
-Only candidate-safe fields are embedded: **title, company, difficulty, topics, and problem statement**. Solutions and hidden tests are excluded from the vector store.
+Only candidate-safe fields are embedded: **title, company, difficulty, topics, and problem statement**. Solutions and hidden tests are excluded.
 
-### Why LangGraph?
-
-LangGraph orchestrates the actual interview workflow through a stateful graph:
+### LangGraph
 
 ```text
 START
@@ -146,43 +149,76 @@ dispatch
 END
 ```
 
-This keeps deterministic operations such as code judging separate from LLM-based tasks such as hints and performance feedback.
-
-## ⚡ Quick Start
+## ⚡ Local Quick Start
 
 ```bash
 git clone <your-repo-url>
 cd ai-coding-interview-agent
 
-# Backend
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
 copy .env.example .env
 
-# Add your AI Pipe key + JWT secret to .env
-
 python -m app.rag.build_index
 python scripts/test_langchain_langgraph.py
 python -m uvicorn app.main:app --reload
+```
 
-# Frontend - new terminal
+In another terminal:
+
+```bash
 cd frontend
 npm install
 npm run dev
 ```
 
-Backend docs:
+Backend docs: `http://127.0.0.1:8000/docs`  
+Frontend: `http://localhost:5173`
+
+## 🤗 Hugging Face Deployment
+
+This repository is configured as a **Docker Space**. During the Docker build, React is compiled with Vite and the production files are served by the same FastAPI process on port `7860`.
+
+### Space Secrets
+
+Add these under **Space → Settings → Secrets**:
 
 ```text
-http://127.0.0.1:8000/docs
+AIPIPE_API_KEY
+JWT_SECRET_KEY
 ```
 
-Frontend:
+### Space Variables
+
+Add these under **Space → Settings → Variables**:
 
 ```text
-http://localhost:5173
+AIPIPE_API_URL=https://aipipe.org/openrouter/v1/chat/completions
+AIPIPE_MODEL=openrouter/free
+DATABASE_PATH=/data/interview_agent.db
+FASTEMBED_CACHE_DIR=/home/user/.cache/fastembed
 ```
+
+For persistent user accounts and interview reports, mount persistent storage at `/data`. Without persistent storage, the SQLite database is not guaranteed to survive Space restarts.
+
+### Deployment Runtime
+
+```text
+Browser
+   ↓
+Hugging Face Docker Space :7860
+   ↓
+FastAPI
+   ├── React production UI
+   ├── JWT authentication
+   ├── LangGraph workflow
+   ├── LangChain + FAISS RAG
+   ├── Python/C++ judge
+   └── AI Pipe → OpenRouter
+```
+
+> **Security:** the current candidate-code judge uses local subprocesses. It is intended for controlled/demo use. A hardened public deployment should execute untrusted code in a dedicated isolated sandbox.
 
 ## 🔌 API Reference
 
@@ -191,12 +227,12 @@ http://localhost:5173
 | POST | `/api/auth/signup` | Create account |
 | POST | `/api/auth/login` | Authenticate user |
 | GET | `/api/auth/me` | Get logged-in user |
-| POST | `/api/interviews/start` | LangGraph → LangChain/FAISS → retrieve 4 questions |
+| POST | `/api/interviews/start` | Retrieve 4 questions and start interview |
 | GET | `/api/interviews/{id}/questions/{pos}` | Fetch interview question |
 | POST | `.../run` | Evaluate visible tests |
 | POST | `.../submit` | Evaluate complete test suite |
-| POST | `.../hint` | LangGraph → contextual AI hint |
-| POST | `.../finish` | LangGraph → score + AI report |
+| POST | `.../hint` | Generate contextual AI hint |
+| POST | `.../finish` | Score interview + generate AI report |
 | GET | `.../solutions/{pos}` | View solution after interview |
 | POST | `/api/reports` | Persist completed report |
 | GET | `/api/reports` | Current user's interview history |
@@ -206,44 +242,28 @@ http://localhost:5173
 ```text
 ai-coding-interview-agent/
  ├── app/
- │   ├── main.py                 # FastAPI entrypoint
- │   ├── accounts.py             # JWT auth + SQLite reports
- │   ├── interview_service.py    # Interview sessions
- │   ├── judge.py                # Python/C++ execution
- │   ├── aipipe.py               # AI Pipe / OpenRouter client
+ │   ├── main.py
+ │   ├── accounts.py
+ │   ├── hf_frontend.py
+ │   ├── interview_service.py
+ │   ├── judge.py
+ │   ├── aipipe.py
  │   ├── starter_code.py
  │   ├── question_store.py
- │   │
  │   ├── graph/
- │   │   ├── state.py            # LangGraph shared state
- │   │   └── interview_graph.py  # StateGraph workflow
- │   │
+ │   │   ├── state.py
+ │   │   └── interview_graph.py
  │   └── rag/
- │       ├── embeddings.py       # LangChain FastEmbed wrapper
- │       ├── build_index.py      # LangChain FAISS builder
- │       └── retriever.py        # Semantic retrieval
- │
+ │       ├── embeddings.py
+ │       ├── build_index.py
+ │       └── retriever.py
  ├── data/
- │   ├── questions.json          # 60 curated problems
+ │   ├── questions.json
  │   └── faiss/
- │       ├── langchain_index/
- │       │   ├── index.faiss
- │       │   └── index.pkl
- │       ├── documents.json
- │       └── config.json
- │
  ├── frontend/
- │   └── src/
- │       ├── App.jsx             # Login + history
- │       ├── InterviewApp.jsx    # Interview UI
- │       ├── api.js
- │       └── styles.css
- │
  ├── scripts/
- │   ├── seed_data.py
- │   ├── test_retrieval.py
- │   └── test_langchain_langgraph.py
- │
+ ├── Dockerfile
+ ├── .dockerignore
  ├── requirements.txt
  ├── .env.example
  └── README.md
@@ -264,29 +284,15 @@ Each problem contains **5 test cases**, giving **300 total test cases**.
 
 Company labels are curated practice-targeting labels and do not claim that every exact problem was historically asked by that company.
 
-## 🔐 Environment
-
-Create `.env` from `.env.example`:
-
-```env
-AIPIPE_API_KEY=your_aipipe_key
-AIPIPE_API_URL=https://aipipe.org/openrouter/v1/chat/completions
-AIPIPE_MODEL=openrouter/free
-
-JWT_SECRET_KEY=your_long_random_secret
-```
-
-> Never commit `.env`. AI credentials remain entirely on the backend.
-
 ## 🔒 Security Notes
 
 - Passwords are hashed with **PBKDF2-HMAC-SHA256** and a unique salt.
 - JWT protects authenticated application sessions.
 - AI Pipe credentials never reach the React frontend.
 - Reports are queried using the authenticated `user_id`.
-- Solutions and hidden test cases are excluded from RAG embeddings.
+- Solutions and hidden tests are excluded from RAG embeddings.
 - The LLM provides hints/reports; **the deterministic judge decides correctness**.
-- ⚠️ Candidate code currently runs in local subprocesses. This is suitable for local/portfolio use, but public production deployment should use Docker, Firecracker, or another isolated execution sandbox.
+- Candidate code currently runs in local subprocesses, so production public use requires stronger isolation.
 
 ## 🎯 Interview Talking Point
 

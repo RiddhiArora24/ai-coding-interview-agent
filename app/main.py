@@ -561,3 +561,18 @@ from app.accounts import router as accounts_router
 app.include_router(
     accounts_router
 )
+
+# ============================================================
+# HUGGING FACE / PRODUCTION FRONTEND
+# Keep this after API route registration.
+# ============================================================
+
+# ============================================================
+# HUGGING FACE / PRODUCTION FRONTEND
+# Keep this after API route registration.
+# ============================================================
+
+# HUGGING_FACE_FRONTEND_SERVING
+from app.hf_frontend import mount_frontend
+
+mount_frontend(app)

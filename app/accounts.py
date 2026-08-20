@@ -32,11 +32,18 @@ load_dotenv(
 )
 
 
-DB_PATH = (
+LOCAL_DB_PATH = (
     ROOT
     / "data"
     / "interview_agent.db"
 )
+
+DB_PATH = Path(
+    os.getenv(
+        "DATABASE_PATH",
+        str(LOCAL_DB_PATH)
+    )
+).expanduser()
 
 
 JWT_SECRET = os.getenv(
