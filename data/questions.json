@@ -1,0 +1,4771 @@
+[
+  {
+    "id": "amazon_001",
+    "company": "Amazon",
+    "difficulty": "Easy",
+    "title": "Two Sum",
+    "topics": [
+      "Array",
+      "Hash Map"
+    ],
+    "problem_statement": "Given an integer array and a target, return indices of two different elements whose values add to the target.",
+    "solution": {
+      "approach": "Store visited values and their indices in a hash map. For every value, check whether its complement has already been seen.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            2,
+            7,
+            11,
+            15
+          ],
+          "target": 9
+        },
+        "expected": [
+          0,
+          1
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            3,
+            2,
+            4
+          ],
+          "target": 6
+        },
+        "expected": [
+          1,
+          2
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            3,
+            3
+          ],
+          "target": 6
+        },
+        "expected": [
+          0,
+          1
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            -1,
+            -2,
+            -3,
+            -4,
+            -5
+          ],
+          "target": -8
+        },
+        "expected": [
+          2,
+          4
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            0,
+            4,
+            3,
+            0
+          ],
+          "target": 0
+        },
+        "expected": [
+          0,
+          3
+        ]
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "amazon_002",
+    "company": "Amazon",
+    "difficulty": "Easy",
+    "title": "Best Time to Buy and Sell Stock",
+    "topics": [
+      "Array",
+      "Greedy"
+    ],
+    "problem_statement": "Given daily stock prices, find the maximum profit obtainable using one buy followed by one sell.",
+    "solution": {
+      "approach": "Track the minimum price seen so far and calculate the best profit at every position.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "prices": [
+            7,
+            1,
+            5,
+            3,
+            6,
+            4
+          ]
+        },
+        "expected": 5
+      },
+      {
+        "input": {
+          "prices": [
+            7,
+            6,
+            4,
+            3,
+            1
+          ]
+        },
+        "expected": 0
+      },
+      {
+        "input": {
+          "prices": [
+            1,
+            2
+          ]
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "prices": [
+            2,
+            4,
+            1
+          ]
+        },
+        "expected": 2
+      },
+      {
+        "input": {
+          "prices": [
+            3,
+            3,
+            5,
+            0,
+            0,
+            3,
+            1,
+            4
+          ]
+        },
+        "expected": 4
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "amazon_003",
+    "company": "Amazon",
+    "difficulty": "Easy",
+    "title": "Valid Parentheses",
+    "topics": [
+      "Stack",
+      "String"
+    ],
+    "problem_statement": "Determine whether every opening bracket in a string is closed by the correct bracket in the correct order.",
+    "solution": {
+      "approach": "Push opening brackets onto a stack and match each closing bracket with the current stack top.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "s": "()"
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "s": "()[]{}"
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "s": "(]"
+        },
+        "expected": false
+      },
+      {
+        "input": {
+          "s": "([)]"
+        },
+        "expected": false
+      },
+      {
+        "input": {
+          "s": "{[]}"
+        },
+        "expected": true
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "amazon_004",
+    "company": "Amazon",
+    "difficulty": "Easy",
+    "title": "Contains Duplicate",
+    "topics": [
+      "Array",
+      "Hash Set"
+    ],
+    "problem_statement": "Return true if any integer appears at least twice in the input array.",
+    "solution": {
+      "approach": "Insert values into a set and return true whenever a value is already present.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3,
+            1
+          ]
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "expected": false
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            1,
+            1,
+            3,
+            3,
+            4,
+            3,
+            2,
+            4,
+            2
+          ]
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "nums": []
+        },
+        "expected": false
+      },
+      {
+        "input": {
+          "nums": [
+            0
+          ]
+        },
+        "expected": false
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "amazon_005",
+    "company": "Amazon",
+    "difficulty": "Medium",
+    "title": "Longest Substring Without Repeating Characters",
+    "topics": [
+      "String",
+      "Sliding Window",
+      "Hash Map"
+    ],
+    "problem_statement": "Find the length of the longest substring containing no repeated characters.",
+    "solution": {
+      "approach": "Use a sliding window and remember the latest position of each character.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "s": "abcabcbb"
+        },
+        "expected": 3
+      },
+      {
+        "input": {
+          "s": "bbbbb"
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "s": "pwwkew"
+        },
+        "expected": 3
+      },
+      {
+        "input": {
+          "s": ""
+        },
+        "expected": 0
+      },
+      {
+        "input": {
+          "s": "dvdf"
+        },
+        "expected": 3
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "amazon_006",
+    "company": "Amazon",
+    "difficulty": "Medium",
+    "title": "Product of Array Except Self",
+    "topics": [
+      "Array",
+      "Prefix",
+      "Suffix"
+    ],
+    "problem_statement": "Return an array where each position contains the product of all input elements except the element at that position without using division.",
+    "solution": {
+      "approach": "Store prefix products in the output array and multiply them by suffix products during a reverse traversal.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(1) extra"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        "expected": [
+          24,
+          12,
+          8,
+          6
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            -1,
+            1,
+            0,
+            -3,
+            3
+          ]
+        },
+        "expected": [
+          0,
+          0,
+          9,
+          0,
+          0
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            2,
+            3
+          ]
+        },
+        "expected": [
+          3,
+          2
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            0,
+            0
+          ]
+        },
+        "expected": [
+          0,
+          0
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            -2,
+            -3,
+            4
+          ]
+        },
+        "expected": [
+          -12,
+          -8,
+          6
+        ]
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "amazon_007",
+    "company": "Amazon",
+    "difficulty": "Medium",
+    "title": "Top K Frequent Elements",
+    "topics": [
+      "Array",
+      "Hash Map",
+      "Heap"
+    ],
+    "problem_statement": "Return the k values that occur most frequently in an integer array.",
+    "solution": {
+      "approach": "Count frequencies using a hash map and use a heap or bucket sort to obtain the k most frequent values.",
+      "time_complexity": "O(n log k)",
+      "space_complexity": "O(n)"
+    },
+    "judge": "unordered",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            1,
+            1,
+            1,
+            2,
+            2,
+            3
+          ],
+          "k": 2
+        },
+        "expected": [
+          1,
+          2
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            1
+          ],
+          "k": 1
+        },
+        "expected": [
+          1
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            4,
+            4,
+            4,
+            5,
+            5,
+            6
+          ],
+          "k": 1
+        },
+        "expected": [
+          4
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            -1,
+            -1,
+            2,
+            2,
+            3
+          ],
+          "k": 2
+        },
+        "expected": [
+          -1,
+          2
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            2,
+            3,
+            3,
+            3
+          ],
+          "k": 2
+        },
+        "expected": [
+          3,
+          2
+        ]
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "amazon_008",
+    "company": "Amazon",
+    "difficulty": "Medium",
+    "title": "Subarray Sum Equals K",
+    "topics": [
+      "Array",
+      "Prefix Sum",
+      "Hash Map"
+    ],
+    "problem_statement": "Count the number of continuous subarrays whose sum equals k.",
+    "solution": {
+      "approach": "Maintain a running prefix sum and count previously seen prefix sums equal to current_sum minus k.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            1,
+            1,
+            1
+          ],
+          "k": 2
+        },
+        "expected": 2
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3
+          ],
+          "k": 3
+        },
+        "expected": 2
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            -1,
+            0
+          ],
+          "k": 0
+        },
+        "expected": 3
+      },
+      {
+        "input": {
+          "nums": [
+            1
+          ],
+          "k": 0
+        },
+        "expected": 0
+      },
+      {
+        "input": {
+          "nums": [
+            0,
+            0,
+            0
+          ],
+          "k": 0
+        },
+        "expected": 6
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "amazon_009",
+    "company": "Amazon",
+    "difficulty": "Hard",
+    "title": "Trapping Rain Water",
+    "topics": [
+      "Array",
+      "Two Pointers"
+    ],
+    "problem_statement": "Given bar heights, calculate the total amount of rain water trapped between the bars.",
+    "solution": {
+      "approach": "Use two pointers while maintaining maximum heights seen from the left and right.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "height": [
+            0,
+            1,
+            0,
+            2,
+            1,
+            0,
+            1,
+            3,
+            2,
+            1,
+            2,
+            1
+          ]
+        },
+        "expected": 6
+      },
+      {
+        "input": {
+          "height": [
+            4,
+            2,
+            0,
+            3,
+            2,
+            5
+          ]
+        },
+        "expected": 9
+      },
+      {
+        "input": {
+          "height": [
+            1,
+            2,
+            3
+          ]
+        },
+        "expected": 0
+      },
+      {
+        "input": {
+          "height": [
+            3,
+            0,
+            2,
+            0,
+            4
+          ]
+        },
+        "expected": 7
+      },
+      {
+        "input": {
+          "height": []
+        },
+        "expected": 0
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "amazon_010",
+    "company": "Amazon",
+    "difficulty": "Hard",
+    "title": "Minimum Window Substring",
+    "topics": [
+      "String",
+      "Sliding Window",
+      "Hash Map"
+    ],
+    "problem_statement": "Find the smallest substring of s containing every character required by t including repeated occurrences.",
+    "solution": {
+      "approach": "Expand a sliding window until all requirements are satisfied, then shrink it while maintaining validity.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(k)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "s": "ADOBECODEBANC",
+          "target": "ABC"
+        },
+        "expected": "BANC"
+      },
+      {
+        "input": {
+          "s": "a",
+          "target": "a"
+        },
+        "expected": "a"
+      },
+      {
+        "input": {
+          "s": "a",
+          "target": "aa"
+        },
+        "expected": ""
+      },
+      {
+        "input": {
+          "s": "aa",
+          "target": "aa"
+        },
+        "expected": "aa"
+      },
+      {
+        "input": {
+          "s": "ab",
+          "target": "b"
+        },
+        "expected": "b"
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "amazon_011",
+    "company": "Amazon",
+    "difficulty": "Hard",
+    "title": "Edit Distance",
+    "topics": [
+      "Dynamic Programming",
+      "String"
+    ],
+    "problem_statement": "Return the minimum number of insertions, deletions, and replacements needed to transform one string into another.",
+    "solution": {
+      "approach": "Use dynamic programming where dp[i][j] represents the minimum operations needed for the first i and j characters.",
+      "time_complexity": "O(m*n)",
+      "space_complexity": "O(m*n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "word1": "horse",
+          "word2": "ros"
+        },
+        "expected": 3
+      },
+      {
+        "input": {
+          "word1": "intention",
+          "word2": "execution"
+        },
+        "expected": 5
+      },
+      {
+        "input": {
+          "word1": "",
+          "word2": "abc"
+        },
+        "expected": 3
+      },
+      {
+        "input": {
+          "word1": "abc",
+          "word2": "abc"
+        },
+        "expected": 0
+      },
+      {
+        "input": {
+          "word1": "kitten",
+          "word2": "sitting"
+        },
+        "expected": 3
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "amazon_012",
+    "company": "Amazon",
+    "difficulty": "Hard",
+    "title": "Word Ladder",
+    "topics": [
+      "Graph",
+      "BFS",
+      "String"
+    ],
+    "problem_statement": "Find the length of the shortest transformation sequence from a begin word to an end word where one character may change at each step and every transformed word must exist in the dictionary.",
+    "solution": {
+      "approach": "Treat words as graph nodes and perform breadth-first search because BFS discovers the shortest transformation sequence.",
+      "time_complexity": "O(N*L^2)",
+      "space_complexity": "O(N*L)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "begin": "hit",
+          "end": "cog",
+          "words": [
+            "hot",
+            "dot",
+            "dog",
+            "lot",
+            "log",
+            "cog"
+          ]
+        },
+        "expected": 5
+      },
+      {
+        "input": {
+          "begin": "hit",
+          "end": "cog",
+          "words": [
+            "hot",
+            "dot",
+            "dog",
+            "lot",
+            "log"
+          ]
+        },
+        "expected": 0
+      },
+      {
+        "input": {
+          "begin": "a",
+          "end": "c",
+          "words": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        "expected": 2
+      },
+      {
+        "input": {
+          "begin": "lost",
+          "end": "cost",
+          "words": [
+            "most",
+            "fost",
+            "lost",
+            "cost"
+          ]
+        },
+        "expected": 2
+      },
+      {
+        "input": {
+          "begin": "red",
+          "end": "tax",
+          "words": [
+            "ted",
+            "tex",
+            "red",
+            "tax",
+            "tad",
+            "den",
+            "rex",
+            "pee"
+          ]
+        },
+        "expected": 4
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "google_001",
+    "company": "Google",
+    "difficulty": "Easy",
+    "title": "Binary Search",
+    "topics": [
+      "Array",
+      "Binary Search"
+    ],
+    "problem_statement": "Find the index of a target value in a sorted integer array or return -1 when it does not exist.",
+    "solution": {
+      "approach": "Repeatedly discard half of the sorted search range.",
+      "time_complexity": "O(log n)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            -1,
+            0,
+            3,
+            5,
+            9,
+            12
+          ],
+          "target": 9
+        },
+        "expected": 4
+      },
+      {
+        "input": {
+          "nums": [
+            -1,
+            0,
+            3,
+            5,
+            9,
+            12
+          ],
+          "target": 2
+        },
+        "expected": -1
+      },
+      {
+        "input": {
+          "nums": [
+            5
+          ],
+          "target": 5
+        },
+        "expected": 0
+      },
+      {
+        "input": {
+          "nums": [],
+          "target": 1
+        },
+        "expected": -1
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "target": 1
+        },
+        "expected": 0
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "google_002",
+    "company": "Google",
+    "difficulty": "Easy",
+    "title": "Valid Anagram",
+    "topics": [
+      "String",
+      "Hash Map"
+    ],
+    "problem_statement": "Determine whether two strings contain exactly the same characters with exactly the same frequencies.",
+    "solution": {
+      "approach": "Compare character frequency maps for both strings.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(k)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "s": "anagram",
+          "t": "nagaram"
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "s": "rat",
+          "t": "car"
+        },
+        "expected": false
+      },
+      {
+        "input": {
+          "s": "",
+          "t": ""
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "s": "a",
+          "t": "ab"
+        },
+        "expected": false
+      },
+      {
+        "input": {
+          "s": "listen",
+          "t": "silent"
+        },
+        "expected": true
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "google_003",
+    "company": "Google",
+    "difficulty": "Easy",
+    "title": "Majority Element",
+    "topics": [
+      "Array",
+      "Boyer Moore"
+    ],
+    "problem_statement": "Return the value appearing more than half of the time in the array.",
+    "solution": {
+      "approach": "Use the Boyer-Moore voting algorithm to maintain a candidate and counter.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            3,
+            2,
+            3
+          ]
+        },
+        "expected": 3
+      },
+      {
+        "input": {
+          "nums": [
+            2,
+            2,
+            1,
+            1,
+            1,
+            2,
+            2
+          ]
+        },
+        "expected": 2
+      },
+      {
+        "input": {
+          "nums": [
+            1
+          ]
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "nums": [
+            -1,
+            -1,
+            -1,
+            2,
+            3
+          ]
+        },
+        "expected": -1
+      },
+      {
+        "input": {
+          "nums": [
+            5,
+            5,
+            5,
+            5,
+            2,
+            2,
+            2
+          ]
+        },
+        "expected": 5
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "google_004",
+    "company": "Google",
+    "difficulty": "Easy",
+    "title": "Missing Number",
+    "topics": [
+      "Array",
+      "Math",
+      "Bit Manipulation"
+    ],
+    "problem_statement": "An array contains distinct numbers from 0 through n with exactly one value missing. Return that missing value.",
+    "solution": {
+      "approach": "Use XOR or compare the expected arithmetic sum with the actual sum.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            3,
+            0,
+            1
+          ]
+        },
+        "expected": 2
+      },
+      {
+        "input": {
+          "nums": [
+            0,
+            1
+          ]
+        },
+        "expected": 2
+      },
+      {
+        "input": {
+          "nums": [
+            9,
+            6,
+            4,
+            2,
+            3,
+            5,
+            7,
+            0,
+            1
+          ]
+        },
+        "expected": 8
+      },
+      {
+        "input": {
+          "nums": [
+            0
+          ]
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "nums": [
+            1
+          ]
+        },
+        "expected": 0
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "google_005",
+    "company": "Google",
+    "difficulty": "Medium",
+    "title": "Group Anagrams",
+    "topics": [
+      "String",
+      "Hash Map"
+    ],
+    "problem_statement": "Group strings that contain the same characters with identical frequencies.",
+    "solution": {
+      "approach": "Use a canonical representation such as sorted characters or frequency counts as the dictionary key.",
+      "time_complexity": "O(n*k log k)",
+      "space_complexity": "O(n*k)"
+    },
+    "judge": "unordered_nested",
+    "test_cases": [
+      {
+        "input": {
+          "words": [
+            "eat",
+            "tea",
+            "tan",
+            "ate",
+            "nat",
+            "bat"
+          ]
+        },
+        "expected": [
+          [
+            "eat",
+            "tea",
+            "ate"
+          ],
+          [
+            "tan",
+            "nat"
+          ],
+          [
+            "bat"
+          ]
+        ]
+      },
+      {
+        "input": {
+          "words": [
+            ""
+          ]
+        },
+        "expected": [
+          [
+            ""
+          ]
+        ]
+      },
+      {
+        "input": {
+          "words": [
+            "a"
+          ]
+        },
+        "expected": [
+          [
+            "a"
+          ]
+        ]
+      },
+      {
+        "input": {
+          "words": [
+            "ab",
+            "ba",
+            "abc",
+            "cab"
+          ]
+        },
+        "expected": [
+          [
+            "ab",
+            "ba"
+          ],
+          [
+            "abc",
+            "cab"
+          ]
+        ]
+      },
+      {
+        "input": {
+          "words": [
+            "abc",
+            "def"
+          ]
+        },
+        "expected": [
+          [
+            "abc"
+          ],
+          [
+            "def"
+          ]
+        ]
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "google_006",
+    "company": "Google",
+    "difficulty": "Medium",
+    "title": "Search in Rotated Sorted Array",
+    "topics": [
+      "Array",
+      "Binary Search"
+    ],
+    "problem_statement": "Search for a target in a sorted array that has been rotated and return its index or -1.",
+    "solution": {
+      "approach": "Use modified binary search and determine which half remains sorted during each iteration.",
+      "time_complexity": "O(log n)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            4,
+            5,
+            6,
+            7,
+            0,
+            1,
+            2
+          ],
+          "target": 0
+        },
+        "expected": 4
+      },
+      {
+        "input": {
+          "nums": [
+            4,
+            5,
+            6,
+            7,
+            0,
+            1,
+            2
+          ],
+          "target": 3
+        },
+        "expected": -1
+      },
+      {
+        "input": {
+          "nums": [
+            1
+          ],
+          "target": 0
+        },
+        "expected": -1
+      },
+      {
+        "input": {
+          "nums": [
+            1
+          ],
+          "target": 1
+        },
+        "expected": 0
+      },
+      {
+        "input": {
+          "nums": [
+            5,
+            1,
+            3
+          ],
+          "target": 5
+        },
+        "expected": 0
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "google_007",
+    "company": "Google",
+    "difficulty": "Medium",
+    "title": "Course Schedule",
+    "topics": [
+      "Graph",
+      "Topological Sort"
+    ],
+    "problem_statement": "Given courses and prerequisite relationships, determine whether every course can eventually be completed.",
+    "solution": {
+      "approach": "Build a directed graph and detect whether it contains a cycle using DFS or topological sorting.",
+      "time_complexity": "O(V+E)",
+      "space_complexity": "O(V+E)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "num_courses": 2,
+          "prerequisites": [
+            [
+              1,
+              0
+            ]
+          ]
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "num_courses": 2,
+          "prerequisites": [
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        "expected": false
+      },
+      {
+        "input": {
+          "num_courses": 4,
+          "prerequisites": [
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              2
+            ]
+          ]
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "num_courses": 3,
+          "prerequisites": [
+            [
+              1,
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              0,
+              1
+            ]
+          ]
+        },
+        "expected": false
+      },
+      {
+        "input": {
+          "num_courses": 1,
+          "prerequisites": []
+        },
+        "expected": true
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "google_008",
+    "company": "Google",
+    "difficulty": "Medium",
+    "title": "Rotting Oranges",
+    "topics": [
+      "Graph",
+      "BFS",
+      "Matrix"
+    ],
+    "problem_statement": "Every minute rotten oranges infect adjacent fresh oranges. Return the minimum time until no fresh orange remains or -1 when impossible.",
+    "solution": {
+      "approach": "Run multi-source BFS starting from every initially rotten orange.",
+      "time_complexity": "O(m*n)",
+      "space_complexity": "O(m*n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "grid": [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ]
+        },
+        "expected": 4
+      },
+      {
+        "input": {
+          "grid": [
+            [
+              2,
+              1,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ]
+        },
+        "expected": -1
+      },
+      {
+        "input": {
+          "grid": [
+            [
+              0,
+              2
+            ]
+          ]
+        },
+        "expected": 0
+      },
+      {
+        "input": {
+          "grid": [
+            [
+              1
+            ]
+          ]
+        },
+        "expected": -1
+      },
+      {
+        "input": {
+          "grid": [
+            [
+              2,
+              2
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        "expected": 1
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "google_009",
+    "company": "Google",
+    "difficulty": "Hard",
+    "title": "Median of Two Sorted Arrays",
+    "topics": [
+      "Array",
+      "Binary Search",
+      "Divide and Conquer"
+    ],
+    "problem_statement": "Return the median value after conceptually combining two sorted arrays without fully merging them.",
+    "solution": {
+      "approach": "Binary search the smaller array to find a partition where values on the left side do not exceed values on the right side.",
+      "time_complexity": "O(log(min(m,n)))",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "nums1": [
+            1,
+            3
+          ],
+          "nums2": [
+            2
+          ]
+        },
+        "expected": 2.0
+      },
+      {
+        "input": {
+          "nums1": [
+            1,
+            2
+          ],
+          "nums2": [
+            3,
+            4
+          ]
+        },
+        "expected": 2.5
+      },
+      {
+        "input": {
+          "nums1": [
+            0,
+            0
+          ],
+          "nums2": [
+            0,
+            0
+          ]
+        },
+        "expected": 0.0
+      },
+      {
+        "input": {
+          "nums1": [],
+          "nums2": [
+            1
+          ]
+        },
+        "expected": 1.0
+      },
+      {
+        "input": {
+          "nums1": [
+            2
+          ],
+          "nums2": []
+        },
+        "expected": 2.0
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "google_010",
+    "company": "Google",
+    "difficulty": "Hard",
+    "title": "Longest Increasing Path in Matrix",
+    "topics": [
+      "Matrix",
+      "DFS",
+      "Memoization"
+    ],
+    "problem_statement": "Find the maximum length of a path through adjacent matrix cells where every next value is strictly larger.",
+    "solution": {
+      "approach": "Run DFS from each cell and memoize the longest increasing path starting from that cell.",
+      "time_complexity": "O(m*n)",
+      "space_complexity": "O(m*n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "matrix": [
+            [
+              9,
+              9,
+              4
+            ],
+            [
+              6,
+              6,
+              8
+            ],
+            [
+              2,
+              1,
+              1
+            ]
+          ]
+        },
+        "expected": 4
+      },
+      {
+        "input": {
+          "matrix": [
+            [
+              3,
+              4,
+              5
+            ],
+            [
+              3,
+              2,
+              6
+            ],
+            [
+              2,
+              2,
+              1
+            ]
+          ]
+        },
+        "expected": 4
+      },
+      {
+        "input": {
+          "matrix": [
+            [
+              1
+            ]
+          ]
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "matrix": [
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        "expected": 2
+      },
+      {
+        "input": {
+          "matrix": [
+            [
+              5,
+              4,
+              3
+            ],
+            [
+              6,
+              1,
+              2
+            ],
+            [
+              7,
+              8,
+              9
+            ]
+          ]
+        },
+        "expected": 9
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "google_011",
+    "company": "Google",
+    "difficulty": "Hard",
+    "title": "Regular Expression Matching",
+    "topics": [
+      "Dynamic Programming",
+      "String"
+    ],
+    "problem_statement": "Determine whether a string completely matches a pattern where dot matches any character and star means zero or more occurrences of the preceding element.",
+    "solution": {
+      "approach": "Use dynamic programming over positions in the string and pattern while handling normal, dot, and star transitions.",
+      "time_complexity": "O(m*n)",
+      "space_complexity": "O(m*n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "s": "aa",
+          "pattern": "a"
+        },
+        "expected": false
+      },
+      {
+        "input": {
+          "s": "aa",
+          "pattern": "a*"
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "s": "ab",
+          "pattern": ".*"
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "s": "aab",
+          "pattern": "c*a*b"
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "s": "mississippi",
+          "pattern": "mis*is*p*."
+        },
+        "expected": false
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "google_012",
+    "company": "Google",
+    "difficulty": "Hard",
+    "title": "Distinct Subsequences",
+    "topics": [
+      "Dynamic Programming",
+      "String"
+    ],
+    "problem_statement": "Count how many distinct subsequences of source equal target.",
+    "solution": {
+      "approach": "Use dynamic programming where each state counts ways to form a target prefix from a source prefix.",
+      "time_complexity": "O(m*n)",
+      "space_complexity": "O(m*n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "source": "rabbbit",
+          "target": "rabbit"
+        },
+        "expected": 3
+      },
+      {
+        "input": {
+          "source": "babgbag",
+          "target": "bag"
+        },
+        "expected": 5
+      },
+      {
+        "input": {
+          "source": "",
+          "target": ""
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "source": "abc",
+          "target": "abc"
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "source": "abc",
+          "target": "d"
+        },
+        "expected": 0
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "microsoft_001",
+    "company": "Microsoft",
+    "difficulty": "Easy",
+    "title": "Reverse String",
+    "topics": [
+      "String",
+      "Two Pointers"
+    ],
+    "problem_statement": "Return the characters of a string in reverse order.",
+    "solution": {
+      "approach": "Use two pointers moving inward or traverse the string backward.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "s": "hello"
+        },
+        "expected": "olleh"
+      },
+      {
+        "input": {
+          "s": "Hannah"
+        },
+        "expected": "hannaH"
+      },
+      {
+        "input": {
+          "s": ""
+        },
+        "expected": ""
+      },
+      {
+        "input": {
+          "s": "a"
+        },
+        "expected": "a"
+      },
+      {
+        "input": {
+          "s": "abc de"
+        },
+        "expected": "ed cba"
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "microsoft_002",
+    "company": "Microsoft",
+    "difficulty": "Easy",
+    "title": "Palindrome Number",
+    "topics": [
+      "Math"
+    ],
+    "problem_statement": "Determine whether an integer reads the same forward and backward.",
+    "solution": {
+      "approach": "Reverse the digits or compare symmetrical digits without converting the entire value.",
+      "time_complexity": "O(log n)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "x": 121
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "x": -121
+        },
+        "expected": false
+      },
+      {
+        "input": {
+          "x": 10
+        },
+        "expected": false
+      },
+      {
+        "input": {
+          "x": 0
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "x": 1221
+        },
+        "expected": true
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "microsoft_003",
+    "company": "Microsoft",
+    "difficulty": "Easy",
+    "title": "Integer Square Root",
+    "topics": [
+      "Math",
+      "Binary Search"
+    ],
+    "problem_statement": "Return the floor of the square root of a non-negative integer.",
+    "solution": {
+      "approach": "Binary search possible integer roots while avoiding floating-point calculations.",
+      "time_complexity": "O(log n)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "x": 4
+        },
+        "expected": 2
+      },
+      {
+        "input": {
+          "x": 8
+        },
+        "expected": 2
+      },
+      {
+        "input": {
+          "x": 0
+        },
+        "expected": 0
+      },
+      {
+        "input": {
+          "x": 1
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "x": 2147395599
+        },
+        "expected": 46339
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "microsoft_004",
+    "company": "Microsoft",
+    "difficulty": "Easy",
+    "title": "Climbing Stairs",
+    "topics": [
+      "Dynamic Programming"
+    ],
+    "problem_statement": "You may climb one or two steps at a time. Return how many distinct ways exist to reach step n.",
+    "solution": {
+      "approach": "The number of ways follows the Fibonacci recurrence using the previous two results.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "n": 2
+        },
+        "expected": 2
+      },
+      {
+        "input": {
+          "n": 3
+        },
+        "expected": 3
+      },
+      {
+        "input": {
+          "n": 1
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "n": 5
+        },
+        "expected": 8
+      },
+      {
+        "input": {
+          "n": 10
+        },
+        "expected": 89
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "microsoft_005",
+    "company": "Microsoft",
+    "difficulty": "Medium",
+    "title": "Spiral Matrix",
+    "topics": [
+      "Matrix",
+      "Simulation"
+    ],
+    "problem_statement": "Return all matrix elements in clockwise spiral order.",
+    "solution": {
+      "approach": "Maintain top, bottom, left, and right boundaries and shrink them after traversing each side.",
+      "time_complexity": "O(m*n)",
+      "space_complexity": "O(1) extra"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "matrix": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6
+            ],
+            [
+              7,
+              8,
+              9
+            ]
+          ]
+        },
+        "expected": [
+          1,
+          2,
+          3,
+          6,
+          9,
+          8,
+          7,
+          4,
+          5
+        ]
+      },
+      {
+        "input": {
+          "matrix": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              5,
+              6,
+              7,
+              8
+            ],
+            [
+              9,
+              10,
+              11,
+              12
+            ]
+          ]
+        },
+        "expected": [
+          1,
+          2,
+          3,
+          4,
+          8,
+          12,
+          11,
+          10,
+          9,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "input": {
+          "matrix": [
+            [
+              1
+            ]
+          ]
+        },
+        "expected": [
+          1
+        ]
+      },
+      {
+        "input": {
+          "matrix": [
+            [
+              1,
+              2
+            ]
+          ]
+        },
+        "expected": [
+          1,
+          2
+        ]
+      },
+      {
+        "input": {
+          "matrix": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        },
+        "expected": [
+          1,
+          2,
+          3
+        ]
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "microsoft_006",
+    "company": "Microsoft",
+    "difficulty": "Medium",
+    "title": "Set Matrix Zeroes",
+    "topics": [
+      "Matrix"
+    ],
+    "problem_statement": "If any matrix element is zero, make its entire row and column zero and return the resulting matrix.",
+    "solution": {
+      "approach": "Use the first row and first column as markers to achieve constant additional space.",
+      "time_complexity": "O(m*n)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "matrix": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              1
+            ]
+          ]
+        },
+        "expected": [
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "input": {
+          "matrix": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        "expected": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "input": {
+          "matrix": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              4
+            ]
+          ]
+        },
+        "expected": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ]
+      },
+      {
+        "input": {
+          "matrix": [
+            [
+              1,
+              0,
+              3
+            ]
+          ]
+        },
+        "expected": [
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "input": {
+          "matrix": [
+            [
+              1
+            ],
+            [
+              0
+            ],
+            [
+              3
+            ]
+          ]
+        },
+        "expected": [
+          [
+            0
+          ],
+          [
+            0
+          ],
+          [
+            0
+          ]
+        ]
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "microsoft_007",
+    "company": "Microsoft",
+    "difficulty": "Medium",
+    "title": "House Robber",
+    "topics": [
+      "Dynamic Programming",
+      "Array"
+    ],
+    "problem_statement": "Find the maximum money obtainable from houses arranged in a row when adjacent houses cannot both be robbed.",
+    "solution": {
+      "approach": "At each house choose between skipping it or adding its value to the best solution two positions earlier.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3,
+            1
+          ]
+        },
+        "expected": 4
+      },
+      {
+        "input": {
+          "nums": [
+            2,
+            7,
+            9,
+            3,
+            1
+          ]
+        },
+        "expected": 12
+      },
+      {
+        "input": {
+          "nums": [
+            1
+          ]
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "nums": [
+            2,
+            1,
+            1,
+            2
+          ]
+        },
+        "expected": 4
+      },
+      {
+        "input": {
+          "nums": []
+        },
+        "expected": 0
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "microsoft_008",
+    "company": "Microsoft",
+    "difficulty": "Medium",
+    "title": "Word Break",
+    "topics": [
+      "Dynamic Programming",
+      "String"
+    ],
+    "problem_statement": "Determine whether a string can be segmented into a sequence of dictionary words.",
+    "solution": {
+      "approach": "Use dynamic programming where dp[i] records whether the first i characters can be segmented.",
+      "time_complexity": "O(n^2)",
+      "space_complexity": "O(n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "s": "leetcode",
+          "words": [
+            "leet",
+            "code"
+          ]
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "s": "applepenapple",
+          "words": [
+            "apple",
+            "pen"
+          ]
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "s": "catsandog",
+          "words": [
+            "cats",
+            "dog",
+            "sand",
+            "and",
+            "cat"
+          ]
+        },
+        "expected": false
+      },
+      {
+        "input": {
+          "s": "aaaaaaa",
+          "words": [
+            "aaaa",
+            "aaa"
+          ]
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "s": "cars",
+          "words": [
+            "car",
+            "ca",
+            "rs"
+          ]
+        },
+        "expected": true
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "microsoft_009",
+    "company": "Microsoft",
+    "difficulty": "Hard",
+    "title": "Largest Rectangle in Histogram",
+    "topics": [
+      "Stack",
+      "Array"
+    ],
+    "problem_statement": "Given histogram bar heights, return the largest rectangular area that can be formed using consecutive bars.",
+    "solution": {
+      "approach": "Use a monotonic increasing stack to determine the maximal width available to each height.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "heights": [
+            2,
+            1,
+            5,
+            6,
+            2,
+            3
+          ]
+        },
+        "expected": 10
+      },
+      {
+        "input": {
+          "heights": [
+            2,
+            4
+          ]
+        },
+        "expected": 4
+      },
+      {
+        "input": {
+          "heights": [
+            1
+          ]
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "heights": []
+        },
+        "expected": 0
+      },
+      {
+        "input": {
+          "heights": [
+            2,
+            2,
+            2
+          ]
+        },
+        "expected": 6
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "microsoft_010",
+    "company": "Microsoft",
+    "difficulty": "Hard",
+    "title": "Maximal Rectangle",
+    "topics": [
+      "Matrix",
+      "Stack",
+      "Dynamic Programming"
+    ],
+    "problem_statement": "Return the area of the largest rectangle containing only ones in a binary matrix.",
+    "solution": {
+      "approach": "Treat each row as the base of a histogram and solve a largest-rectangle-in-histogram problem.",
+      "time_complexity": "O(m*n)",
+      "space_complexity": "O(n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "matrix": [
+            [
+              "1",
+              "0",
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "1",
+              "0",
+              "1",
+              "1",
+              "1"
+            ],
+            [
+              "1",
+              "1",
+              "1",
+              "1",
+              "1"
+            ],
+            [
+              "1",
+              "0",
+              "0",
+              "1",
+              "0"
+            ]
+          ]
+        },
+        "expected": 6
+      },
+      {
+        "input": {
+          "matrix": [
+            [
+              "0"
+            ]
+          ]
+        },
+        "expected": 0
+      },
+      {
+        "input": {
+          "matrix": [
+            [
+              "1"
+            ]
+          ]
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "matrix": [
+            [
+              "1",
+              "1"
+            ],
+            [
+              "1",
+              "1"
+            ]
+          ]
+        },
+        "expected": 4
+      },
+      {
+        "input": {
+          "matrix": [
+            [
+              "1",
+              "0",
+              "1"
+            ]
+          ]
+        },
+        "expected": 1
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "microsoft_011",
+    "company": "Microsoft",
+    "difficulty": "Hard",
+    "title": "Burst Balloons",
+    "topics": [
+      "Dynamic Programming",
+      "Interval DP"
+    ],
+    "problem_statement": "Each balloon gives coins based on its value and its current neighbors when burst. Return the maximum obtainable coins.",
+    "solution": {
+      "approach": "Use interval dynamic programming and choose which balloon is burst last inside each interval.",
+      "time_complexity": "O(n^3)",
+      "space_complexity": "O(n^2)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            3,
+            1,
+            5,
+            8
+          ]
+        },
+        "expected": 167
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            5
+          ]
+        },
+        "expected": 10
+      },
+      {
+        "input": {
+          "nums": [
+            1
+          ]
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "nums": [
+            2,
+            2
+          ]
+        },
+        "expected": 6
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3
+          ]
+        },
+        "expected": 12
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "microsoft_012",
+    "company": "Microsoft",
+    "difficulty": "Hard",
+    "title": "Wildcard Matching",
+    "topics": [
+      "Dynamic Programming",
+      "String"
+    ],
+    "problem_statement": "Match an entire string against a pattern where question mark matches one character and star matches any sequence.",
+    "solution": {
+      "approach": "Use dynamic programming over string and pattern positions while handling star as either empty or consuming another character.",
+      "time_complexity": "O(m*n)",
+      "space_complexity": "O(m*n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "s": "aa",
+          "pattern": "a"
+        },
+        "expected": false
+      },
+      {
+        "input": {
+          "s": "aa",
+          "pattern": "*"
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "s": "cb",
+          "pattern": "?a"
+        },
+        "expected": false
+      },
+      {
+        "input": {
+          "s": "adceb",
+          "pattern": "*a*b"
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "s": "acdcb",
+          "pattern": "a*c?b"
+        },
+        "expected": false
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "meta_001",
+    "company": "Meta",
+    "difficulty": "Easy",
+    "title": "Move Zeroes",
+    "topics": [
+      "Array",
+      "Two Pointers"
+    ],
+    "problem_statement": "Move every zero to the end while preserving the relative order of non-zero values and return the resulting array.",
+    "solution": {
+      "approach": "Use one pointer for the next non-zero destination and compact non-zero values before filling remaining positions with zero.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            0,
+            1,
+            0,
+            3,
+            12
+          ]
+        },
+        "expected": [
+          1,
+          3,
+          12,
+          0,
+          0
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            0
+          ]
+        },
+        "expected": [
+          0
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3
+          ]
+        },
+        "expected": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            0,
+            0,
+            1
+          ]
+        },
+        "expected": [
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            4,
+            0,
+            5,
+            0,
+            0,
+            3
+          ]
+        },
+        "expected": [
+          4,
+          5,
+          3,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "meta_002",
+    "company": "Meta",
+    "difficulty": "Easy",
+    "title": "Single Number",
+    "topics": [
+      "Array",
+      "Bit Manipulation"
+    ],
+    "problem_statement": "Every value appears exactly twice except one value. Return the value that appears once.",
+    "solution": {
+      "approach": "XOR every value because identical values cancel each other.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            2,
+            2,
+            1
+          ]
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "nums": [
+            4,
+            1,
+            2,
+            1,
+            2
+          ]
+        },
+        "expected": 4
+      },
+      {
+        "input": {
+          "nums": [
+            1
+          ]
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "nums": [
+            -1,
+            -1,
+            -2
+          ]
+        },
+        "expected": -2
+      },
+      {
+        "input": {
+          "nums": [
+            0,
+            1,
+            0
+          ]
+        },
+        "expected": 1
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "meta_003",
+    "company": "Meta",
+    "difficulty": "Easy",
+    "title": "Fibonacci Number",
+    "topics": [
+      "Dynamic Programming",
+      "Math"
+    ],
+    "problem_statement": "Return the nth Fibonacci number where F0 is zero and F1 is one.",
+    "solution": {
+      "approach": "Iteratively keep only the previous two Fibonacci values.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "n": 0
+        },
+        "expected": 0
+      },
+      {
+        "input": {
+          "n": 1
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "n": 2
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "n": 5
+        },
+        "expected": 5
+      },
+      {
+        "input": {
+          "n": 10
+        },
+        "expected": 55
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "meta_004",
+    "company": "Meta",
+    "difficulty": "Easy",
+    "title": "Counting Bits",
+    "topics": [
+      "Dynamic Programming",
+      "Bit Manipulation"
+    ],
+    "problem_statement": "For every integer from zero through n, return how many one bits appear in its binary representation.",
+    "solution": {
+      "approach": "Use the relation bits[i] equals bits[i shifted right by one] plus the least significant bit.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "n": 2
+        },
+        "expected": [
+          0,
+          1,
+          1
+        ]
+      },
+      {
+        "input": {
+          "n": 5
+        },
+        "expected": [
+          0,
+          1,
+          1,
+          2,
+          1,
+          2
+        ]
+      },
+      {
+        "input": {
+          "n": 0
+        },
+        "expected": [
+          0
+        ]
+      },
+      {
+        "input": {
+          "n": 1
+        },
+        "expected": [
+          0,
+          1
+        ]
+      },
+      {
+        "input": {
+          "n": 8
+        },
+        "expected": [
+          0,
+          1,
+          1,
+          2,
+          1,
+          2,
+          2,
+          3,
+          1
+        ]
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "meta_005",
+    "company": "Meta",
+    "difficulty": "Medium",
+    "title": "Container With Most Water",
+    "topics": [
+      "Array",
+      "Two Pointers"
+    ],
+    "problem_statement": "Choose two vertical lines that together with the x-axis contain the maximum amount of water.",
+    "solution": {
+      "approach": "Start with pointers at both ends and repeatedly move the pointer with the smaller height.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "height": [
+            1,
+            8,
+            6,
+            2,
+            5,
+            4,
+            8,
+            3,
+            7
+          ]
+        },
+        "expected": 49
+      },
+      {
+        "input": {
+          "height": [
+            1,
+            1
+          ]
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "height": [
+            4,
+            3,
+            2,
+            1,
+            4
+          ]
+        },
+        "expected": 16
+      },
+      {
+        "input": {
+          "height": [
+            1,
+            2,
+            1
+          ]
+        },
+        "expected": 2
+      },
+      {
+        "input": {
+          "height": [
+            2,
+            3,
+            4,
+            5,
+            18,
+            17,
+            6
+          ]
+        },
+        "expected": 17
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "meta_006",
+    "company": "Meta",
+    "difficulty": "Medium",
+    "title": "3Sum",
+    "topics": [
+      "Array",
+      "Sorting",
+      "Two Pointers"
+    ],
+    "problem_statement": "Return all unique triples of integers whose sum equals zero.",
+    "solution": {
+      "approach": "Sort the array, fix one value, and use two pointers to search for complementary pairs while skipping duplicates.",
+      "time_complexity": "O(n^2)",
+      "space_complexity": "O(1) extra"
+    },
+    "judge": "unordered_nested",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            -1,
+            0,
+            1,
+            2,
+            -1,
+            -4
+          ]
+        },
+        "expected": [
+          [
+            -1,
+            -1,
+            2
+          ],
+          [
+            -1,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            0,
+            1,
+            1
+          ]
+        },
+        "expected": []
+      },
+      {
+        "input": {
+          "nums": [
+            0,
+            0,
+            0
+          ]
+        },
+        "expected": [
+          [
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            -2,
+            0,
+            1,
+            1,
+            2
+          ]
+        },
+        "expected": [
+          [
+            -2,
+            0,
+            2
+          ],
+          [
+            -2,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            -1,
+            -1,
+            0
+          ]
+        },
+        "expected": [
+          [
+            -1,
+            0,
+            1
+          ]
+        ]
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "meta_007",
+    "company": "Meta",
+    "difficulty": "Medium",
+    "title": "Daily Temperatures",
+    "topics": [
+      "Array",
+      "Monotonic Stack"
+    ],
+    "problem_statement": "For every daily temperature return how many days must pass before a warmer temperature occurs, or zero if none occurs.",
+    "solution": {
+      "approach": "Use a decreasing monotonic stack containing indices of temperatures still waiting for a warmer day.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "temperatures": [
+            73,
+            74,
+            75,
+            71,
+            69,
+            72,
+            76,
+            73
+          ]
+        },
+        "expected": [
+          1,
+          1,
+          4,
+          2,
+          1,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "input": {
+          "temperatures": [
+            30,
+            40,
+            50,
+            60
+          ]
+        },
+        "expected": [
+          1,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "input": {
+          "temperatures": [
+            30,
+            60,
+            90
+          ]
+        },
+        "expected": [
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "input": {
+          "temperatures": [
+            90,
+            80,
+            70
+          ]
+        },
+        "expected": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "input": {
+          "temperatures": [
+            70
+          ]
+        },
+        "expected": [
+          0
+        ]
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "meta_008",
+    "company": "Meta",
+    "difficulty": "Medium",
+    "title": "Sort Colors",
+    "topics": [
+      "Array",
+      "Two Pointers"
+    ],
+    "problem_statement": "Sort an array containing only zero, one, and two without using a general-purpose sorting algorithm.",
+    "solution": {
+      "approach": "Use the Dutch national flag algorithm with low, current, and high pointers.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            2,
+            0,
+            2,
+            1,
+            1,
+            0
+          ]
+        },
+        "expected": [
+          0,
+          0,
+          1,
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            2,
+            0,
+            1
+          ]
+        },
+        "expected": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            0
+          ]
+        },
+        "expected": [
+          0
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            1
+          ]
+        },
+        "expected": [
+          1
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            2,
+            2,
+            0,
+            0
+          ]
+        },
+        "expected": [
+          0,
+          0,
+          2,
+          2
+        ]
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "meta_009",
+    "company": "Meta",
+    "difficulty": "Hard",
+    "title": "N Queens Count",
+    "topics": [
+      "Backtracking"
+    ],
+    "problem_statement": "Return the number of ways n queens can be placed on an n by n chessboard such that no queens attack each other.",
+    "solution": {
+      "approach": "Place one queen row by row while tracking occupied columns and diagonals and backtrack after each choice.",
+      "time_complexity": "O(n!)",
+      "space_complexity": "O(n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "n": 1
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "n": 2
+        },
+        "expected": 0
+      },
+      {
+        "input": {
+          "n": 3
+        },
+        "expected": 0
+      },
+      {
+        "input": {
+          "n": 4
+        },
+        "expected": 2
+      },
+      {
+        "input": {
+          "n": 5
+        },
+        "expected": 10
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "meta_010",
+    "company": "Meta",
+    "difficulty": "Hard",
+    "title": "Merge K Sorted Lists",
+    "topics": [
+      "Heap",
+      "Linked List",
+      "Divide and Conquer"
+    ],
+    "problem_statement": "Given several sorted lists represented as arrays, merge them into one sorted array.",
+    "solution": {
+      "approach": "Push the first value from every non-empty list into a min heap and repeatedly advance the list whose value was removed.",
+      "time_complexity": "O(N log k)",
+      "space_complexity": "O(k)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "lists": [
+            [
+              1,
+              4,
+              5
+            ],
+            [
+              1,
+              3,
+              4
+            ],
+            [
+              2,
+              6
+            ]
+          ]
+        },
+        "expected": [
+          1,
+          1,
+          2,
+          3,
+          4,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "input": {
+          "lists": []
+        },
+        "expected": []
+      },
+      {
+        "input": {
+          "lists": [
+            []
+          ]
+        },
+        "expected": []
+      },
+      {
+        "input": {
+          "lists": [
+            [
+              1
+            ],
+            [
+              0
+            ]
+          ]
+        },
+        "expected": [
+          0,
+          1
+        ]
+      },
+      {
+        "input": {
+          "lists": [
+            [
+              -2,
+              -1
+            ],
+            [
+              0
+            ],
+            [
+              2,
+              3
+            ]
+          ]
+        },
+        "expected": [
+          -2,
+          -1,
+          0,
+          2,
+          3
+        ]
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "meta_011",
+    "company": "Meta",
+    "difficulty": "Hard",
+    "title": "First Missing Positive",
+    "topics": [
+      "Array",
+      "Hashing"
+    ],
+    "problem_statement": "Find the smallest positive integer that does not occur in an unsorted integer array using constant additional space.",
+    "solution": {
+      "approach": "Place every value x in its natural position x minus one whenever possible, then find the first mismatching position.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            0
+          ]
+        },
+        "expected": 3
+      },
+      {
+        "input": {
+          "nums": [
+            3,
+            4,
+            -1,
+            1
+          ]
+        },
+        "expected": 2
+      },
+      {
+        "input": {
+          "nums": [
+            7,
+            8,
+            9,
+            11,
+            12
+          ]
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "nums": [
+            1
+          ]
+        },
+        "expected": 2
+      },
+      {
+        "input": {
+          "nums": [
+            2
+          ]
+        },
+        "expected": 1
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "meta_012",
+    "company": "Meta",
+    "difficulty": "Hard",
+    "title": "Sliding Window Maximum",
+    "topics": [
+      "Array",
+      "Deque",
+      "Sliding Window"
+    ],
+    "problem_statement": "Return the maximum element in every contiguous window of size k.",
+    "solution": {
+      "approach": "Maintain a decreasing deque of useful indices so the front always stores the current window maximum.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(k)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            1,
+            3,
+            -1,
+            -3,
+            5,
+            3,
+            6,
+            7
+          ],
+          "k": 3
+        },
+        "expected": [
+          3,
+          3,
+          5,
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            1
+          ],
+          "k": 1
+        },
+        "expected": [
+          1
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            -1
+          ],
+          "k": 1
+        },
+        "expected": [
+          1,
+          -1
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            9,
+            11
+          ],
+          "k": 2
+        },
+        "expected": [
+          11
+        ]
+      },
+      {
+        "input": {
+          "nums": [
+            4,
+            -2
+          ],
+          "k": 2
+        },
+        "expected": [
+          4
+        ]
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "goldman_001",
+    "company": "Goldman Sachs",
+    "difficulty": "Easy",
+    "title": "Intersection of Two Arrays",
+    "topics": [
+      "Array",
+      "Hash Set"
+    ],
+    "problem_statement": "Return the unique values that appear in both arrays.",
+    "solution": {
+      "approach": "Convert one array to a set and collect common values while avoiding duplicates.",
+      "time_complexity": "O(n+m)",
+      "space_complexity": "O(n)"
+    },
+    "judge": "unordered",
+    "test_cases": [
+      {
+        "input": {
+          "nums1": [
+            1,
+            2,
+            2,
+            1
+          ],
+          "nums2": [
+            2,
+            2
+          ]
+        },
+        "expected": [
+          2
+        ]
+      },
+      {
+        "input": {
+          "nums1": [
+            4,
+            9,
+            5
+          ],
+          "nums2": [
+            9,
+            4,
+            9,
+            8,
+            4
+          ]
+        },
+        "expected": [
+          9,
+          4
+        ]
+      },
+      {
+        "input": {
+          "nums1": [],
+          "nums2": []
+        },
+        "expected": []
+      },
+      {
+        "input": {
+          "nums1": [
+            1
+          ],
+          "nums2": [
+            1
+          ]
+        },
+        "expected": [
+          1
+        ]
+      },
+      {
+        "input": {
+          "nums1": [
+            1,
+            2
+          ],
+          "nums2": [
+            3,
+            4
+          ]
+        },
+        "expected": []
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "goldman_002",
+    "company": "Goldman Sachs",
+    "difficulty": "Easy",
+    "title": "Longest Common Prefix",
+    "topics": [
+      "String"
+    ],
+    "problem_statement": "Return the longest prefix shared by every string in an array.",
+    "solution": {
+      "approach": "Compare characters column by column or shrink a candidate prefix until every string starts with it.",
+      "time_complexity": "O(total characters)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "words": [
+            "flower",
+            "flow",
+            "flight"
+          ]
+        },
+        "expected": "fl"
+      },
+      {
+        "input": {
+          "words": [
+            "dog",
+            "racecar",
+            "car"
+          ]
+        },
+        "expected": ""
+      },
+      {
+        "input": {
+          "words": [
+            "a"
+          ]
+        },
+        "expected": "a"
+      },
+      {
+        "input": {
+          "words": [
+            "interview",
+            "internet",
+            "internal"
+          ]
+        },
+        "expected": "inter"
+      },
+      {
+        "input": {
+          "words": [
+            "",
+            "b"
+          ]
+        },
+        "expected": ""
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "goldman_003",
+    "company": "Goldman Sachs",
+    "difficulty": "Easy",
+    "title": "Power of Two",
+    "topics": [
+      "Math",
+      "Bit Manipulation"
+    ],
+    "problem_statement": "Determine whether a positive integer is exactly a power of two.",
+    "solution": {
+      "approach": "A positive power of two has one set bit, so n AND n-minus-one equals zero.",
+      "time_complexity": "O(1)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "n": 1
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "n": 16
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "n": 3
+        },
+        "expected": false
+      },
+      {
+        "input": {
+          "n": 0
+        },
+        "expected": false
+      },
+      {
+        "input": {
+          "n": -2
+        },
+        "expected": false
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "goldman_004",
+    "company": "Goldman Sachs",
+    "difficulty": "Easy",
+    "title": "Roman to Integer",
+    "topics": [
+      "String",
+      "Hash Map"
+    ],
+    "problem_statement": "Convert a valid Roman numeral string to its integer value.",
+    "solution": {
+      "approach": "Scan numeral values and subtract a value when it is smaller than the following numeral; otherwise add it.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "s": "III"
+        },
+        "expected": 3
+      },
+      {
+        "input": {
+          "s": "LVIII"
+        },
+        "expected": 58
+      },
+      {
+        "input": {
+          "s": "MCMXCIV"
+        },
+        "expected": 1994
+      },
+      {
+        "input": {
+          "s": "IX"
+        },
+        "expected": 9
+      },
+      {
+        "input": {
+          "s": "XL"
+        },
+        "expected": 40
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "goldman_005",
+    "company": "Goldman Sachs",
+    "difficulty": "Medium",
+    "title": "Gas Station",
+    "topics": [
+      "Array",
+      "Greedy"
+    ],
+    "problem_statement": "Given gas available and travel cost around a circular route, return a starting station allowing one complete circuit or -1.",
+    "solution": {
+      "approach": "If total gas is sufficient, greedily reset the candidate start whenever the running balance becomes negative.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "gas": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "cost": [
+            3,
+            4,
+            5,
+            1,
+            2
+          ]
+        },
+        "expected": 3
+      },
+      {
+        "input": {
+          "gas": [
+            2,
+            3,
+            4
+          ],
+          "cost": [
+            3,
+            4,
+            3
+          ]
+        },
+        "expected": -1
+      },
+      {
+        "input": {
+          "gas": [
+            5
+          ],
+          "cost": [
+            4
+          ]
+        },
+        "expected": 0
+      },
+      {
+        "input": {
+          "gas": [
+            2
+          ],
+          "cost": [
+            3
+          ]
+        },
+        "expected": -1
+      },
+      {
+        "input": {
+          "gas": [
+            3,
+            1,
+            1
+          ],
+          "cost": [
+            1,
+            2,
+            2
+          ]
+        },
+        "expected": 0
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "goldman_006",
+    "company": "Goldman Sachs",
+    "difficulty": "Medium",
+    "title": "Insert Interval",
+    "topics": [
+      "Array",
+      "Intervals"
+    ],
+    "problem_statement": "Insert a new interval into sorted non-overlapping intervals and merge every overlap.",
+    "solution": {
+      "approach": "Append intervals before the new interval, merge overlaps, then append intervals occurring after it.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "intervals": [
+            [
+              1,
+              3
+            ],
+            [
+              6,
+              9
+            ]
+          ],
+          "new_interval": [
+            2,
+            5
+          ]
+        },
+        "expected": [
+          [
+            1,
+            5
+          ],
+          [
+            6,
+            9
+          ]
+        ]
+      },
+      {
+        "input": {
+          "intervals": [
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              6,
+              7
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              12,
+              16
+            ]
+          ],
+          "new_interval": [
+            4,
+            8
+          ]
+        },
+        "expected": [
+          [
+            1,
+            2
+          ],
+          [
+            3,
+            10
+          ],
+          [
+            12,
+            16
+          ]
+        ]
+      },
+      {
+        "input": {
+          "intervals": [],
+          "new_interval": [
+            5,
+            7
+          ]
+        },
+        "expected": [
+          [
+            5,
+            7
+          ]
+        ]
+      },
+      {
+        "input": {
+          "intervals": [
+            [
+              1,
+              5
+            ]
+          ],
+          "new_interval": [
+            2,
+            3
+          ]
+        },
+        "expected": [
+          [
+            1,
+            5
+          ]
+        ]
+      },
+      {
+        "input": {
+          "intervals": [
+            [
+              1,
+              5
+            ]
+          ],
+          "new_interval": [
+            6,
+            8
+          ]
+        },
+        "expected": [
+          [
+            1,
+            5
+          ],
+          [
+            6,
+            8
+          ]
+        ]
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "goldman_007",
+    "company": "Goldman Sachs",
+    "difficulty": "Medium",
+    "title": "Task Scheduler",
+    "topics": [
+      "Heap",
+      "Greedy"
+    ],
+    "problem_statement": "Given CPU tasks and a cooldown n between identical task types, return the minimum execution intervals required.",
+    "solution": {
+      "approach": "Use frequency counts and schedule high-frequency tasks while respecting cooldown slots.",
+      "time_complexity": "O(m log k)",
+      "space_complexity": "O(k)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "tasks": [
+            "A",
+            "A",
+            "A",
+            "B",
+            "B",
+            "B"
+          ],
+          "n": 2
+        },
+        "expected": 8
+      },
+      {
+        "input": {
+          "tasks": [
+            "A",
+            "A",
+            "A",
+            "B",
+            "B",
+            "B"
+          ],
+          "n": 0
+        },
+        "expected": 6
+      },
+      {
+        "input": {
+          "tasks": [
+            "A",
+            "A",
+            "A",
+            "A",
+            "B",
+            "B",
+            "C",
+            "C"
+          ],
+          "n": 2
+        },
+        "expected": 10
+      },
+      {
+        "input": {
+          "tasks": [
+            "A"
+          ],
+          "n": 3
+        },
+        "expected": 1
+      },
+      {
+        "input": {
+          "tasks": [
+            "A",
+            "B",
+            "C"
+          ],
+          "n": 2
+        },
+        "expected": 3
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "goldman_008",
+    "company": "Goldman Sachs",
+    "difficulty": "Medium",
+    "title": "Longest Consecutive Sequence",
+    "topics": [
+      "Array",
+      "Hash Set"
+    ],
+    "problem_statement": "Return the length of the longest sequence of consecutive integers in an unsorted array.",
+    "solution": {
+      "approach": "Put values in a set and begin counting only from values that do not have a predecessor.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            100,
+            4,
+            200,
+            1,
+            3,
+            2
+          ]
+        },
+        "expected": 4
+      },
+      {
+        "input": {
+          "nums": [
+            0,
+            3,
+            7,
+            2,
+            5,
+            8,
+            4,
+            6,
+            0,
+            1
+          ]
+        },
+        "expected": 9
+      },
+      {
+        "input": {
+          "nums": []
+        },
+        "expected": 0
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            0,
+            1
+          ]
+        },
+        "expected": 3
+      },
+      {
+        "input": {
+          "nums": [
+            -1,
+            0,
+            1,
+            2
+          ]
+        },
+        "expected": 4
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "goldman_009",
+    "company": "Goldman Sachs",
+    "difficulty": "Hard",
+    "title": "Combination Sum",
+    "topics": [
+      "Array",
+      "Backtracking"
+    ],
+    "problem_statement": "Return every unique combination of candidate values whose repeated use can sum exactly to target.",
+    "solution": {
+      "approach": "Backtrack over candidate choices while tracking the remaining target and preventing reordered duplicates.",
+      "time_complexity": "Exponential",
+      "space_complexity": "O(target/min(candidate))"
+    },
+    "judge": "unordered_nested",
+    "test_cases": [
+      {
+        "input": {
+          "candidates": [
+            2,
+            3,
+            6,
+            7
+          ],
+          "target": 7
+        },
+        "expected": [
+          [
+            2,
+            2,
+            3
+          ],
+          [
+            7
+          ]
+        ]
+      },
+      {
+        "input": {
+          "candidates": [
+            2,
+            3,
+            5
+          ],
+          "target": 8
+        },
+        "expected": [
+          [
+            2,
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            3,
+            3
+          ],
+          [
+            3,
+            5
+          ]
+        ]
+      },
+      {
+        "input": {
+          "candidates": [
+            2
+          ],
+          "target": 1
+        },
+        "expected": []
+      },
+      {
+        "input": {
+          "candidates": [
+            1
+          ],
+          "target": 2
+        },
+        "expected": [
+          [
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "input": {
+          "candidates": [
+            2,
+            4
+          ],
+          "target": 8
+        },
+        "expected": [
+          [
+            2,
+            2,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            4
+          ],
+          [
+            4,
+            4
+          ]
+        ]
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "goldman_010",
+    "company": "Goldman Sachs",
+    "difficulty": "Hard",
+    "title": "Partition Equal Subset Sum",
+    "topics": [
+      "Dynamic Programming",
+      "Array"
+    ],
+    "problem_statement": "Determine whether an integer array can be divided into two subsets having equal total sums.",
+    "solution": {
+      "approach": "If the total sum is even, solve a subset-sum problem targeting half of the total.",
+      "time_complexity": "O(n*sum)",
+      "space_complexity": "O(sum)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            1,
+            5,
+            11,
+            5
+          ]
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            2,
+            3,
+            5
+          ]
+        },
+        "expected": false
+      },
+      {
+        "input": {
+          "nums": [
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "nums": [
+            1,
+            1
+          ]
+        },
+        "expected": true
+      },
+      {
+        "input": {
+          "nums": [
+            2
+          ]
+        },
+        "expected": false
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "goldman_011",
+    "company": "Goldman Sachs",
+    "difficulty": "Hard",
+    "title": "Minimum Path Sum",
+    "topics": [
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "problem_statement": "Starting at the upper-left matrix cell and moving only right or down, return the minimum possible sum on a path to the lower-right cell.",
+    "solution": {
+      "approach": "Use dynamic programming where each cell stores its value plus the smaller reachable cost from above or left.",
+      "time_complexity": "O(m*n)",
+      "space_complexity": "O(n)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "grid": [
+            [
+              1,
+              3,
+              1
+            ],
+            [
+              1,
+              5,
+              1
+            ],
+            [
+              4,
+              2,
+              1
+            ]
+          ]
+        },
+        "expected": 7
+      },
+      {
+        "input": {
+          "grid": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6
+            ]
+          ]
+        },
+        "expected": 12
+      },
+      {
+        "input": {
+          "grid": [
+            [
+              5
+            ]
+          ]
+        },
+        "expected": 5
+      },
+      {
+        "input": {
+          "grid": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              1
+            ]
+          ]
+        },
+        "expected": 3
+      },
+      {
+        "input": {
+          "grid": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        },
+        "expected": 6
+      }
+    ],
+    "source_type": "curated_practice"
+  },
+  {
+    "id": "goldman_012",
+    "company": "Goldman Sachs",
+    "difficulty": "Hard",
+    "title": "Maximum Product Subarray",
+    "topics": [
+      "Dynamic Programming",
+      "Array"
+    ],
+    "problem_statement": "Return the maximum product obtainable from a non-empty contiguous subarray.",
+    "solution": {
+      "approach": "Track both the maximum and minimum products ending at each position because multiplication by a negative value swaps their roles.",
+      "time_complexity": "O(n)",
+      "space_complexity": "O(1)"
+    },
+    "judge": "exact",
+    "test_cases": [
+      {
+        "input": {
+          "nums": [
+            2,
+            3,
+            -2,
+            4
+          ]
+        },
+        "expected": 6
+      },
+      {
+        "input": {
+          "nums": [
+            -2,
+            0,
+            -1
+          ]
+        },
+        "expected": 0
+      },
+      {
+        "input": {
+          "nums": [
+            -2,
+            3,
+            -4
+          ]
+        },
+        "expected": 24
+      },
+      {
+        "input": {
+          "nums": [
+            0,
+            2
+          ]
+        },
+        "expected": 2
+      },
+      {
+        "input": {
+          "nums": [
+            -2
+          ]
+        },
+        "expected": -2
+      }
+    ],
+    "source_type": "curated_practice"
+  }
+]

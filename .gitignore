@@ -1,0 +1,37 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+.vscode/
+.idea/
+
+# Secrets
+.env
+.env.local
+.env.production
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# User database
+data/interview_agent.db
+data/*.db
+*.sqlite
+*.sqlite3
+
+# Frontend generated files
+frontend/node_modules/
+frontend/dist/
+node_modules/
+dist/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+

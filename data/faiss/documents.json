@@ -1,0 +1,671 @@
+[
+  {
+    "id": "amazon_001",
+    "company": "Amazon",
+    "difficulty": "Easy",
+    "title": "Two Sum",
+    "topics": [
+      "Array",
+      "Hash Map"
+    ],
+    "text": "Title: Two Sum\nCompany: Amazon\nDifficulty: Easy\nTopics: Array, Hash Map\n\nProblem:\nGiven an integer array and a target, return indices of two different elements whose values add to the target."
+  },
+  {
+    "id": "amazon_002",
+    "company": "Amazon",
+    "difficulty": "Easy",
+    "title": "Best Time to Buy and Sell Stock",
+    "topics": [
+      "Array",
+      "Greedy"
+    ],
+    "text": "Title: Best Time to Buy and Sell Stock\nCompany: Amazon\nDifficulty: Easy\nTopics: Array, Greedy\n\nProblem:\nGiven daily stock prices, find the maximum profit obtainable using one buy followed by one sell."
+  },
+  {
+    "id": "amazon_003",
+    "company": "Amazon",
+    "difficulty": "Easy",
+    "title": "Valid Parentheses",
+    "topics": [
+      "Stack",
+      "String"
+    ],
+    "text": "Title: Valid Parentheses\nCompany: Amazon\nDifficulty: Easy\nTopics: Stack, String\n\nProblem:\nDetermine whether every opening bracket in a string is closed by the correct bracket in the correct order."
+  },
+  {
+    "id": "amazon_004",
+    "company": "Amazon",
+    "difficulty": "Easy",
+    "title": "Contains Duplicate",
+    "topics": [
+      "Array",
+      "Hash Set"
+    ],
+    "text": "Title: Contains Duplicate\nCompany: Amazon\nDifficulty: Easy\nTopics: Array, Hash Set\n\nProblem:\nReturn true if any integer appears at least twice in the input array."
+  },
+  {
+    "id": "amazon_005",
+    "company": "Amazon",
+    "difficulty": "Medium",
+    "title": "Longest Substring Without Repeating Characters",
+    "topics": [
+      "String",
+      "Sliding Window",
+      "Hash Map"
+    ],
+    "text": "Title: Longest Substring Without Repeating Characters\nCompany: Amazon\nDifficulty: Medium\nTopics: String, Sliding Window, Hash Map\n\nProblem:\nFind the length of the longest substring containing no repeated characters."
+  },
+  {
+    "id": "amazon_006",
+    "company": "Amazon",
+    "difficulty": "Medium",
+    "title": "Product of Array Except Self",
+    "topics": [
+      "Array",
+      "Prefix",
+      "Suffix"
+    ],
+    "text": "Title: Product of Array Except Self\nCompany: Amazon\nDifficulty: Medium\nTopics: Array, Prefix, Suffix\n\nProblem:\nReturn an array where each position contains the product of all input elements except the element at that position without using division."
+  },
+  {
+    "id": "amazon_007",
+    "company": "Amazon",
+    "difficulty": "Medium",
+    "title": "Top K Frequent Elements",
+    "topics": [
+      "Array",
+      "Hash Map",
+      "Heap"
+    ],
+    "text": "Title: Top K Frequent Elements\nCompany: Amazon\nDifficulty: Medium\nTopics: Array, Hash Map, Heap\n\nProblem:\nReturn the k values that occur most frequently in an integer array."
+  },
+  {
+    "id": "amazon_008",
+    "company": "Amazon",
+    "difficulty": "Medium",
+    "title": "Subarray Sum Equals K",
+    "topics": [
+      "Array",
+      "Prefix Sum",
+      "Hash Map"
+    ],
+    "text": "Title: Subarray Sum Equals K\nCompany: Amazon\nDifficulty: Medium\nTopics: Array, Prefix Sum, Hash Map\n\nProblem:\nCount the number of continuous subarrays whose sum equals k."
+  },
+  {
+    "id": "amazon_009",
+    "company": "Amazon",
+    "difficulty": "Hard",
+    "title": "Trapping Rain Water",
+    "topics": [
+      "Array",
+      "Two Pointers"
+    ],
+    "text": "Title: Trapping Rain Water\nCompany: Amazon\nDifficulty: Hard\nTopics: Array, Two Pointers\n\nProblem:\nGiven bar heights, calculate the total amount of rain water trapped between the bars."
+  },
+  {
+    "id": "amazon_010",
+    "company": "Amazon",
+    "difficulty": "Hard",
+    "title": "Minimum Window Substring",
+    "topics": [
+      "String",
+      "Sliding Window",
+      "Hash Map"
+    ],
+    "text": "Title: Minimum Window Substring\nCompany: Amazon\nDifficulty: Hard\nTopics: String, Sliding Window, Hash Map\n\nProblem:\nFind the smallest substring of s containing every character required by t including repeated occurrences."
+  },
+  {
+    "id": "amazon_011",
+    "company": "Amazon",
+    "difficulty": "Hard",
+    "title": "Edit Distance",
+    "topics": [
+      "Dynamic Programming",
+      "String"
+    ],
+    "text": "Title: Edit Distance\nCompany: Amazon\nDifficulty: Hard\nTopics: Dynamic Programming, String\n\nProblem:\nReturn the minimum number of insertions, deletions, and replacements needed to transform one string into another."
+  },
+  {
+    "id": "amazon_012",
+    "company": "Amazon",
+    "difficulty": "Hard",
+    "title": "Word Ladder",
+    "topics": [
+      "Graph",
+      "BFS",
+      "String"
+    ],
+    "text": "Title: Word Ladder\nCompany: Amazon\nDifficulty: Hard\nTopics: Graph, BFS, String\n\nProblem:\nFind the length of the shortest transformation sequence from a begin word to an end word where one character may change at each step and every transformed word must exist in the dictionary."
+  },
+  {
+    "id": "google_001",
+    "company": "Google",
+    "difficulty": "Easy",
+    "title": "Binary Search",
+    "topics": [
+      "Array",
+      "Binary Search"
+    ],
+    "text": "Title: Binary Search\nCompany: Google\nDifficulty: Easy\nTopics: Array, Binary Search\n\nProblem:\nFind the index of a target value in a sorted integer array or return -1 when it does not exist."
+  },
+  {
+    "id": "google_002",
+    "company": "Google",
+    "difficulty": "Easy",
+    "title": "Valid Anagram",
+    "topics": [
+      "String",
+      "Hash Map"
+    ],
+    "text": "Title: Valid Anagram\nCompany: Google\nDifficulty: Easy\nTopics: String, Hash Map\n\nProblem:\nDetermine whether two strings contain exactly the same characters with exactly the same frequencies."
+  },
+  {
+    "id": "google_003",
+    "company": "Google",
+    "difficulty": "Easy",
+    "title": "Majority Element",
+    "topics": [
+      "Array",
+      "Boyer Moore"
+    ],
+    "text": "Title: Majority Element\nCompany: Google\nDifficulty: Easy\nTopics: Array, Boyer Moore\n\nProblem:\nReturn the value appearing more than half of the time in the array."
+  },
+  {
+    "id": "google_004",
+    "company": "Google",
+    "difficulty": "Easy",
+    "title": "Missing Number",
+    "topics": [
+      "Array",
+      "Math",
+      "Bit Manipulation"
+    ],
+    "text": "Title: Missing Number\nCompany: Google\nDifficulty: Easy\nTopics: Array, Math, Bit Manipulation\n\nProblem:\nAn array contains distinct numbers from 0 through n with exactly one value missing. Return that missing value."
+  },
+  {
+    "id": "google_005",
+    "company": "Google",
+    "difficulty": "Medium",
+    "title": "Group Anagrams",
+    "topics": [
+      "String",
+      "Hash Map"
+    ],
+    "text": "Title: Group Anagrams\nCompany: Google\nDifficulty: Medium\nTopics: String, Hash Map\n\nProblem:\nGroup strings that contain the same characters with identical frequencies."
+  },
+  {
+    "id": "google_006",
+    "company": "Google",
+    "difficulty": "Medium",
+    "title": "Search in Rotated Sorted Array",
+    "topics": [
+      "Array",
+      "Binary Search"
+    ],
+    "text": "Title: Search in Rotated Sorted Array\nCompany: Google\nDifficulty: Medium\nTopics: Array, Binary Search\n\nProblem:\nSearch for a target in a sorted array that has been rotated and return its index or -1."
+  },
+  {
+    "id": "google_007",
+    "company": "Google",
+    "difficulty": "Medium",
+    "title": "Course Schedule",
+    "topics": [
+      "Graph",
+      "Topological Sort"
+    ],
+    "text": "Title: Course Schedule\nCompany: Google\nDifficulty: Medium\nTopics: Graph, Topological Sort\n\nProblem:\nGiven courses and prerequisite relationships, determine whether every course can eventually be completed."
+  },
+  {
+    "id": "google_008",
+    "company": "Google",
+    "difficulty": "Medium",
+    "title": "Rotting Oranges",
+    "topics": [
+      "Graph",
+      "BFS",
+      "Matrix"
+    ],
+    "text": "Title: Rotting Oranges\nCompany: Google\nDifficulty: Medium\nTopics: Graph, BFS, Matrix\n\nProblem:\nEvery minute rotten oranges infect adjacent fresh oranges. Return the minimum time until no fresh orange remains or -1 when impossible."
+  },
+  {
+    "id": "google_009",
+    "company": "Google",
+    "difficulty": "Hard",
+    "title": "Median of Two Sorted Arrays",
+    "topics": [
+      "Array",
+      "Binary Search",
+      "Divide and Conquer"
+    ],
+    "text": "Title: Median of Two Sorted Arrays\nCompany: Google\nDifficulty: Hard\nTopics: Array, Binary Search, Divide and Conquer\n\nProblem:\nReturn the median value after conceptually combining two sorted arrays without fully merging them."
+  },
+  {
+    "id": "google_010",
+    "company": "Google",
+    "difficulty": "Hard",
+    "title": "Longest Increasing Path in Matrix",
+    "topics": [
+      "Matrix",
+      "DFS",
+      "Memoization"
+    ],
+    "text": "Title: Longest Increasing Path in Matrix\nCompany: Google\nDifficulty: Hard\nTopics: Matrix, DFS, Memoization\n\nProblem:\nFind the maximum length of a path through adjacent matrix cells where every next value is strictly larger."
+  },
+  {
+    "id": "google_011",
+    "company": "Google",
+    "difficulty": "Hard",
+    "title": "Regular Expression Matching",
+    "topics": [
+      "Dynamic Programming",
+      "String"
+    ],
+    "text": "Title: Regular Expression Matching\nCompany: Google\nDifficulty: Hard\nTopics: Dynamic Programming, String\n\nProblem:\nDetermine whether a string completely matches a pattern where dot matches any character and star means zero or more occurrences of the preceding element."
+  },
+  {
+    "id": "google_012",
+    "company": "Google",
+    "difficulty": "Hard",
+    "title": "Distinct Subsequences",
+    "topics": [
+      "Dynamic Programming",
+      "String"
+    ],
+    "text": "Title: Distinct Subsequences\nCompany: Google\nDifficulty: Hard\nTopics: Dynamic Programming, String\n\nProblem:\nCount how many distinct subsequences of source equal target."
+  },
+  {
+    "id": "microsoft_001",
+    "company": "Microsoft",
+    "difficulty": "Easy",
+    "title": "Reverse String",
+    "topics": [
+      "String",
+      "Two Pointers"
+    ],
+    "text": "Title: Reverse String\nCompany: Microsoft\nDifficulty: Easy\nTopics: String, Two Pointers\n\nProblem:\nReturn the characters of a string in reverse order."
+  },
+  {
+    "id": "microsoft_002",
+    "company": "Microsoft",
+    "difficulty": "Easy",
+    "title": "Palindrome Number",
+    "topics": [
+      "Math"
+    ],
+    "text": "Title: Palindrome Number\nCompany: Microsoft\nDifficulty: Easy\nTopics: Math\n\nProblem:\nDetermine whether an integer reads the same forward and backward."
+  },
+  {
+    "id": "microsoft_003",
+    "company": "Microsoft",
+    "difficulty": "Easy",
+    "title": "Integer Square Root",
+    "topics": [
+      "Math",
+      "Binary Search"
+    ],
+    "text": "Title: Integer Square Root\nCompany: Microsoft\nDifficulty: Easy\nTopics: Math, Binary Search\n\nProblem:\nReturn the floor of the square root of a non-negative integer."
+  },
+  {
+    "id": "microsoft_004",
+    "company": "Microsoft",
+    "difficulty": "Easy",
+    "title": "Climbing Stairs",
+    "topics": [
+      "Dynamic Programming"
+    ],
+    "text": "Title: Climbing Stairs\nCompany: Microsoft\nDifficulty: Easy\nTopics: Dynamic Programming\n\nProblem:\nYou may climb one or two steps at a time. Return how many distinct ways exist to reach step n."
+  },
+  {
+    "id": "microsoft_005",
+    "company": "Microsoft",
+    "difficulty": "Medium",
+    "title": "Spiral Matrix",
+    "topics": [
+      "Matrix",
+      "Simulation"
+    ],
+    "text": "Title: Spiral Matrix\nCompany: Microsoft\nDifficulty: Medium\nTopics: Matrix, Simulation\n\nProblem:\nReturn all matrix elements in clockwise spiral order."
+  },
+  {
+    "id": "microsoft_006",
+    "company": "Microsoft",
+    "difficulty": "Medium",
+    "title": "Set Matrix Zeroes",
+    "topics": [
+      "Matrix"
+    ],
+    "text": "Title: Set Matrix Zeroes\nCompany: Microsoft\nDifficulty: Medium\nTopics: Matrix\n\nProblem:\nIf any matrix element is zero, make its entire row and column zero and return the resulting matrix."
+  },
+  {
+    "id": "microsoft_007",
+    "company": "Microsoft",
+    "difficulty": "Medium",
+    "title": "House Robber",
+    "topics": [
+      "Dynamic Programming",
+      "Array"
+    ],
+    "text": "Title: House Robber\nCompany: Microsoft\nDifficulty: Medium\nTopics: Dynamic Programming, Array\n\nProblem:\nFind the maximum money obtainable from houses arranged in a row when adjacent houses cannot both be robbed."
+  },
+  {
+    "id": "microsoft_008",
+    "company": "Microsoft",
+    "difficulty": "Medium",
+    "title": "Word Break",
+    "topics": [
+      "Dynamic Programming",
+      "String"
+    ],
+    "text": "Title: Word Break\nCompany: Microsoft\nDifficulty: Medium\nTopics: Dynamic Programming, String\n\nProblem:\nDetermine whether a string can be segmented into a sequence of dictionary words."
+  },
+  {
+    "id": "microsoft_009",
+    "company": "Microsoft",
+    "difficulty": "Hard",
+    "title": "Largest Rectangle in Histogram",
+    "topics": [
+      "Stack",
+      "Array"
+    ],
+    "text": "Title: Largest Rectangle in Histogram\nCompany: Microsoft\nDifficulty: Hard\nTopics: Stack, Array\n\nProblem:\nGiven histogram bar heights, return the largest rectangular area that can be formed using consecutive bars."
+  },
+  {
+    "id": "microsoft_010",
+    "company": "Microsoft",
+    "difficulty": "Hard",
+    "title": "Maximal Rectangle",
+    "topics": [
+      "Matrix",
+      "Stack",
+      "Dynamic Programming"
+    ],
+    "text": "Title: Maximal Rectangle\nCompany: Microsoft\nDifficulty: Hard\nTopics: Matrix, Stack, Dynamic Programming\n\nProblem:\nReturn the area of the largest rectangle containing only ones in a binary matrix."
+  },
+  {
+    "id": "microsoft_011",
+    "company": "Microsoft",
+    "difficulty": "Hard",
+    "title": "Burst Balloons",
+    "topics": [
+      "Dynamic Programming",
+      "Interval DP"
+    ],
+    "text": "Title: Burst Balloons\nCompany: Microsoft\nDifficulty: Hard\nTopics: Dynamic Programming, Interval DP\n\nProblem:\nEach balloon gives coins based on its value and its current neighbors when burst. Return the maximum obtainable coins."
+  },
+  {
+    "id": "microsoft_012",
+    "company": "Microsoft",
+    "difficulty": "Hard",
+    "title": "Wildcard Matching",
+    "topics": [
+      "Dynamic Programming",
+      "String"
+    ],
+    "text": "Title: Wildcard Matching\nCompany: Microsoft\nDifficulty: Hard\nTopics: Dynamic Programming, String\n\nProblem:\nMatch an entire string against a pattern where question mark matches one character and star matches any sequence."
+  },
+  {
+    "id": "meta_001",
+    "company": "Meta",
+    "difficulty": "Easy",
+    "title": "Move Zeroes",
+    "topics": [
+      "Array",
+      "Two Pointers"
+    ],
+    "text": "Title: Move Zeroes\nCompany: Meta\nDifficulty: Easy\nTopics: Array, Two Pointers\n\nProblem:\nMove every zero to the end while preserving the relative order of non-zero values and return the resulting array."
+  },
+  {
+    "id": "meta_002",
+    "company": "Meta",
+    "difficulty": "Easy",
+    "title": "Single Number",
+    "topics": [
+      "Array",
+      "Bit Manipulation"
+    ],
+    "text": "Title: Single Number\nCompany: Meta\nDifficulty: Easy\nTopics: Array, Bit Manipulation\n\nProblem:\nEvery value appears exactly twice except one value. Return the value that appears once."
+  },
+  {
+    "id": "meta_003",
+    "company": "Meta",
+    "difficulty": "Easy",
+    "title": "Fibonacci Number",
+    "topics": [
+      "Dynamic Programming",
+      "Math"
+    ],
+    "text": "Title: Fibonacci Number\nCompany: Meta\nDifficulty: Easy\nTopics: Dynamic Programming, Math\n\nProblem:\nReturn the nth Fibonacci number where F0 is zero and F1 is one."
+  },
+  {
+    "id": "meta_004",
+    "company": "Meta",
+    "difficulty": "Easy",
+    "title": "Counting Bits",
+    "topics": [
+      "Dynamic Programming",
+      "Bit Manipulation"
+    ],
+    "text": "Title: Counting Bits\nCompany: Meta\nDifficulty: Easy\nTopics: Dynamic Programming, Bit Manipulation\n\nProblem:\nFor every integer from zero through n, return how many one bits appear in its binary representation."
+  },
+  {
+    "id": "meta_005",
+    "company": "Meta",
+    "difficulty": "Medium",
+    "title": "Container With Most Water",
+    "topics": [
+      "Array",
+      "Two Pointers"
+    ],
+    "text": "Title: Container With Most Water\nCompany: Meta\nDifficulty: Medium\nTopics: Array, Two Pointers\n\nProblem:\nChoose two vertical lines that together with the x-axis contain the maximum amount of water."
+  },
+  {
+    "id": "meta_006",
+    "company": "Meta",
+    "difficulty": "Medium",
+    "title": "3Sum",
+    "topics": [
+      "Array",
+      "Sorting",
+      "Two Pointers"
+    ],
+    "text": "Title: 3Sum\nCompany: Meta\nDifficulty: Medium\nTopics: Array, Sorting, Two Pointers\n\nProblem:\nReturn all unique triples of integers whose sum equals zero."
+  },
+  {
+    "id": "meta_007",
+    "company": "Meta",
+    "difficulty": "Medium",
+    "title": "Daily Temperatures",
+    "topics": [
+      "Array",
+      "Monotonic Stack"
+    ],
+    "text": "Title: Daily Temperatures\nCompany: Meta\nDifficulty: Medium\nTopics: Array, Monotonic Stack\n\nProblem:\nFor every daily temperature return how many days must pass before a warmer temperature occurs, or zero if none occurs."
+  },
+  {
+    "id": "meta_008",
+    "company": "Meta",
+    "difficulty": "Medium",
+    "title": "Sort Colors",
+    "topics": [
+      "Array",
+      "Two Pointers"
+    ],
+    "text": "Title: Sort Colors\nCompany: Meta\nDifficulty: Medium\nTopics: Array, Two Pointers\n\nProblem:\nSort an array containing only zero, one, and two without using a general-purpose sorting algorithm."
+  },
+  {
+    "id": "meta_009",
+    "company": "Meta",
+    "difficulty": "Hard",
+    "title": "N Queens Count",
+    "topics": [
+      "Backtracking"
+    ],
+    "text": "Title: N Queens Count\nCompany: Meta\nDifficulty: Hard\nTopics: Backtracking\n\nProblem:\nReturn the number of ways n queens can be placed on an n by n chessboard such that no queens attack each other."
+  },
+  {
+    "id": "meta_010",
+    "company": "Meta",
+    "difficulty": "Hard",
+    "title": "Merge K Sorted Lists",
+    "topics": [
+      "Heap",
+      "Linked List",
+      "Divide and Conquer"
+    ],
+    "text": "Title: Merge K Sorted Lists\nCompany: Meta\nDifficulty: Hard\nTopics: Heap, Linked List, Divide and Conquer\n\nProblem:\nGiven several sorted lists represented as arrays, merge them into one sorted array."
+  },
+  {
+    "id": "meta_011",
+    "company": "Meta",
+    "difficulty": "Hard",
+    "title": "First Missing Positive",
+    "topics": [
+      "Array",
+      "Hashing"
+    ],
+    "text": "Title: First Missing Positive\nCompany: Meta\nDifficulty: Hard\nTopics: Array, Hashing\n\nProblem:\nFind the smallest positive integer that does not occur in an unsorted integer array using constant additional space."
+  },
+  {
+    "id": "meta_012",
+    "company": "Meta",
+    "difficulty": "Hard",
+    "title": "Sliding Window Maximum",
+    "topics": [
+      "Array",
+      "Deque",
+      "Sliding Window"
+    ],
+    "text": "Title: Sliding Window Maximum\nCompany: Meta\nDifficulty: Hard\nTopics: Array, Deque, Sliding Window\n\nProblem:\nReturn the maximum element in every contiguous window of size k."
+  },
+  {
+    "id": "goldman_001",
+    "company": "Goldman Sachs",
+    "difficulty": "Easy",
+    "title": "Intersection of Two Arrays",
+    "topics": [
+      "Array",
+      "Hash Set"
+    ],
+    "text": "Title: Intersection of Two Arrays\nCompany: Goldman Sachs\nDifficulty: Easy\nTopics: Array, Hash Set\n\nProblem:\nReturn the unique values that appear in both arrays."
+  },
+  {
+    "id": "goldman_002",
+    "company": "Goldman Sachs",
+    "difficulty": "Easy",
+    "title": "Longest Common Prefix",
+    "topics": [
+      "String"
+    ],
+    "text": "Title: Longest Common Prefix\nCompany: Goldman Sachs\nDifficulty: Easy\nTopics: String\n\nProblem:\nReturn the longest prefix shared by every string in an array."
+  },
+  {
+    "id": "goldman_003",
+    "company": "Goldman Sachs",
+    "difficulty": "Easy",
+    "title": "Power of Two",
+    "topics": [
+      "Math",
+      "Bit Manipulation"
+    ],
+    "text": "Title: Power of Two\nCompany: Goldman Sachs\nDifficulty: Easy\nTopics: Math, Bit Manipulation\n\nProblem:\nDetermine whether a positive integer is exactly a power of two."
+  },
+  {
+    "id": "goldman_004",
+    "company": "Goldman Sachs",
+    "difficulty": "Easy",
+    "title": "Roman to Integer",
+    "topics": [
+      "String",
+      "Hash Map"
+    ],
+    "text": "Title: Roman to Integer\nCompany: Goldman Sachs\nDifficulty: Easy\nTopics: String, Hash Map\n\nProblem:\nConvert a valid Roman numeral string to its integer value."
+  },
+  {
+    "id": "goldman_005",
+    "company": "Goldman Sachs",
+    "difficulty": "Medium",
+    "title": "Gas Station",
+    "topics": [
+      "Array",
+      "Greedy"
+    ],
+    "text": "Title: Gas Station\nCompany: Goldman Sachs\nDifficulty: Medium\nTopics: Array, Greedy\n\nProblem:\nGiven gas available and travel cost around a circular route, return a starting station allowing one complete circuit or -1."
+  },
+  {
+    "id": "goldman_006",
+    "company": "Goldman Sachs",
+    "difficulty": "Medium",
+    "title": "Insert Interval",
+    "topics": [
+      "Array",
+      "Intervals"
+    ],
+    "text": "Title: Insert Interval\nCompany: Goldman Sachs\nDifficulty: Medium\nTopics: Array, Intervals\n\nProblem:\nInsert a new interval into sorted non-overlapping intervals and merge every overlap."
+  },
+  {
+    "id": "goldman_007",
+    "company": "Goldman Sachs",
+    "difficulty": "Medium",
+    "title": "Task Scheduler",
+    "topics": [
+      "Heap",
+      "Greedy"
+    ],
+    "text": "Title: Task Scheduler\nCompany: Goldman Sachs\nDifficulty: Medium\nTopics: Heap, Greedy\n\nProblem:\nGiven CPU tasks and a cooldown n between identical task types, return the minimum execution intervals required."
+  },
+  {
+    "id": "goldman_008",
+    "company": "Goldman Sachs",
+    "difficulty": "Medium",
+    "title": "Longest Consecutive Sequence",
+    "topics": [
+      "Array",
+      "Hash Set"
+    ],
+    "text": "Title: Longest Consecutive Sequence\nCompany: Goldman Sachs\nDifficulty: Medium\nTopics: Array, Hash Set\n\nProblem:\nReturn the length of the longest sequence of consecutive integers in an unsorted array."
+  },
+  {
+    "id": "goldman_009",
+    "company": "Goldman Sachs",
+    "difficulty": "Hard",
+    "title": "Combination Sum",
+    "topics": [
+      "Array",
+      "Backtracking"
+    ],
+    "text": "Title: Combination Sum\nCompany: Goldman Sachs\nDifficulty: Hard\nTopics: Array, Backtracking\n\nProblem:\nReturn every unique combination of candidate values whose repeated use can sum exactly to target."
+  },
+  {
+    "id": "goldman_010",
+    "company": "Goldman Sachs",
+    "difficulty": "Hard",
+    "title": "Partition Equal Subset Sum",
+    "topics": [
+      "Dynamic Programming",
+      "Array"
+    ],
+    "text": "Title: Partition Equal Subset Sum\nCompany: Goldman Sachs\nDifficulty: Hard\nTopics: Dynamic Programming, Array\n\nProblem:\nDetermine whether an integer array can be divided into two subsets having equal total sums."
+  },
+  {
+    "id": "goldman_011",
+    "company": "Goldman Sachs",
+    "difficulty": "Hard",
+    "title": "Minimum Path Sum",
+    "topics": [
+      "Dynamic Programming",
+      "Matrix"
+    ],
+    "text": "Title: Minimum Path Sum\nCompany: Goldman Sachs\nDifficulty: Hard\nTopics: Dynamic Programming, Matrix\n\nProblem:\nStarting at the upper-left matrix cell and moving only right or down, return the minimum possible sum on a path to the lower-right cell."
+  },
+  {
+    "id": "goldman_012",
+    "company": "Goldman Sachs",
+    "difficulty": "Hard",
+    "title": "Maximum Product Subarray",
+    "topics": [
+      "Dynamic Programming",
+      "Array"
+    ],
+    "text": "Title: Maximum Product Subarray\nCompany: Goldman Sachs\nDifficulty: Hard\nTopics: Dynamic Programming, Array\n\nProblem:\nReturn the maximum product obtainable from a non-empty contiguous subarray."
+  }
+]
