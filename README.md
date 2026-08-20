@@ -17,22 +17,22 @@
 
 An AI-powered mock interview platform where candidates choose a company and difficulty, solve four semantically retrieved coding questions in Python or C++, run code against test cases, request contextual AI hints, and receive an AI-generated performance report with persistent interview history.
 
-**60 curated questions Ã‚Â· 5 companies Ã‚Â· 300 test cases Ã‚Â· Python + C++ Ã‚Â· LangChain RAG Ã‚Â· LangGraph orchestration**
+**60 curated questions · 5 companies · 300 test cases · Python + C++ · LangChain RAG · LangGraph orchestration**
 
 ---
 
-## Ã¢Å“Â¨ Features
+## ✨ Features
 
-- Ã°Å¸â€Â **Secure authentication** Ã¢â‚¬â€ JWT sessions with PBKDF2-HMAC-SHA256 password hashing
-- Ã°Å¸Â§Â  **LangChain RAG** Ã¢â‚¬â€ `Document` + `FastEmbedEmbeddings` + FAISS semantic retrieval
-- Ã°Å¸â€¢Â¸Ã¯Â¸Â **LangGraph workflow** Ã¢â‚¬â€ routes retrieval, code evaluation, hint generation, and final reporting
-- Ã°Å¸â€™Â» **Real code execution** Ã¢â‚¬â€ Python subprocess and C++17 via `g++`
-- Ã°Å¸Â§Âª **Visible + full test evaluation** Ã¢â‚¬â€ Run uses visible tests; Submit evaluates the complete test suite
-- Ã°Å¸â€™Â¡ **AI hints, not answers** Ã¢â‚¬â€ model receives candidate code and judge context without revealing full solutions
-- Ã°Å¸â€œÅ  **AI performance reports** Ã¢â‚¬â€ score, strengths, weaknesses, and recommended next steps
-- Ã°Å¸â€¢Ëœ **Per-user history** Ã¢â‚¬â€ reports are persisted in SQLite and scoped by `user_id`
+- 🔐 **Secure authentication** — JWT sessions with PBKDF2-HMAC-SHA256 password hashing
+- 🧠 **LangChain RAG** — `Document` + `FastEmbedEmbeddings` + FAISS semantic retrieval
+- 🕸️ **LangGraph workflow** — routes retrieval, code evaluation, hint generation, and final reporting
+- 💻 **Real code execution** — Python subprocess and C++17 via `g++`
+- 🧪 **Visible + full test evaluation** — Run uses visible tests; Submit evaluates the complete test suite
+- 💡 **AI hints, not answers** — model receives candidate code and judge context without revealing full solutions
+- 📊 **AI performance reports** — score, strengths, weaknesses, and recommended next steps
+- 🕘 **Per-user history** — reports are persisted in SQLite and scoped by `user_id`
 
-## Ã°Å¸Ââ€”Ã¯Â¸Â Tech Stack
+## 🏗️ Tech Stack
 
 | Layer | Technology |
 |---|---|
@@ -42,13 +42,13 @@ An AI-powered mock interview platform where candidates choose a company and diff
 | RAG Framework | **LangChain** |
 | Retrieval | LangChain FAISS + `BAAI/bge-small-en-v1.5` |
 | Embeddings | FastEmbed via `FastEmbedEmbeddings` |
-| AI Layer | AI Pipe Ã¢â€ â€™ OpenRouter |
+| AI Layer | AI Pipe → OpenRouter |
 | Auth | JWT + PBKDF2-HMAC-SHA256 |
 | Database | SQLite |
 | Execution | Python `subprocess` / `g++` (C++17) |
 | Deployment | Render Docker Web Service |
 
-## Ã°Å¸â€â€ž Interview Workflow
+## 🔄 Interview Workflow
 
 ```mermaid
 flowchart LR
@@ -63,7 +63,7 @@ flowchart LR
     I --> J[Code Judge]
     J --> K{Need Hint?}
     K -- Yes --> L[LangGraph Hint Node]
-    L --> M[AI Pipe Ã¢â€ â€™ OpenRouter]
+    L --> M[AI Pipe → OpenRouter]
     M --> H
     K -- No --> N[Next Question]
     N --> O[Finish Interview]
@@ -73,7 +73,7 @@ flowchart LR
     Q --> R[(SQLite History)]
 ```
 
-## Ã°Å¸â€œÂ High-Level Design
+## 📐 High-Level Design
 
 ```mermaid
 graph TD
@@ -108,15 +108,15 @@ graph TD
 
 ```text
 questions.json
-      Ã¢â€ â€œ
+      ↓
 LangChain Documents
-      Ã¢â€ â€œ
+      ↓
 FastEmbedEmbeddings
-      Ã¢â€ â€œ
+      ↓
 FAISS Vector Store
-      Ã¢â€ â€œ
+      ↓
 Company + Difficulty Filter
-      Ã¢â€ â€œ
+      ↓
 Top 4 Relevant Questions
 ```
 
@@ -126,17 +126,17 @@ Only candidate-safe fields are embedded: **title, company, difficulty, topics, a
 
 ```text
 START
-  Ã¢â€ â€œ
+  ↓
 dispatch
-  Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ retrieve_questions Ã¢â€ â€™ LangChain + FAISS
-  Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ evaluate_code      Ã¢â€ â€™ Python/C++ Judge
-  Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ generate_hint      Ã¢â€ â€™ AI Pipe/OpenRouter
-  Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ generate_report    Ã¢â€ â€™ AI Pipe/OpenRouter
-  Ã¢â€ â€œ
+  ├── retrieve_questions → LangChain + FAISS
+  ├── evaluate_code      → Python/C++ Judge
+  ├── generate_hint      → AI Pipe/OpenRouter
+  └── generate_report    → AI Pipe/OpenRouter
+  ↓
 END
 ```
 
-## Ã¢Å¡Â¡ Local Quick Start
+## ⚡ Local Quick Start
 
 ```bash
 git clone <your-repo-url>
@@ -163,33 +163,7 @@ npm run dev
 Backend docs: `http://127.0.0.1:8000/docs`  
 Frontend: `http://localhost:5173`
 
-## Ã°Å¸Â¤â€” Hugging Face Deployment
-
-This repository is configured as a **Docker Space**. During the Docker build, React is compiled with Vite and the production files are served by the same FastAPI process on port `7860`.
-
-### Space Secrets
-
-Add these under **Space Ã¢â€ â€™ Settings Ã¢â€ â€™ Secrets**:
-
-```text
-AIPIPE_API_KEY
-JWT_SECRET_KEY
-```
-
-### Space Variables
-
-Add these under **Space Ã¢â€ â€™ Settings Ã¢â€ â€™ Variables**:
-
-```text
-AIPIPE_API_URL=https://aipipe.org/openrouter/v1/chat/completions
-AIPIPE_MODEL=openrouter/free
-DATABASE_PATH=/data/interview_agent.db
-FASTEMBED_CACHE_DIR=/home/user/.cache/fastembed
-```
-
-For persistent user accounts and interview reports, mount persistent storage at `/data`. Without persistent storage, the SQLite database is not guaranteed to survive Space restarts.
-
-### 🚀 Deployment
+## 🚀 Deployment
 
 The complete application is deployed on **Render** as a single Docker web service.
 
@@ -228,7 +202,7 @@ FASTEMBED_CACHE_DIR=/home/user/.cache/fastembed
 
 > Render's free service may spin down after inactivity, so the first request after an idle period can take longer.
 
-## Ã°Å¸â€Å’ API Reference
+## 🔌 API Reference
 
 | Method | Endpoint | Purpose |
 |---|---|---|
@@ -245,39 +219,39 @@ FASTEMBED_CACHE_DIR=/home/user/.cache/fastembed
 | POST | `/api/reports` | Persist completed report |
 | GET | `/api/reports` | Current user's interview history |
 
-## Ã°Å¸â€œâ€š Project Structure
+## 📂 Project Structure
 
 ```text
 ai-coding-interview-agent/
- Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ app/
- Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ main.py
- Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ accounts.py
- Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ production_frontend.py
- Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ interview_service.py
- Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ judge.py
- Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ aipipe.py
- Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ starter_code.py
- Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ question_store.py
- Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ graph/
- Ã¢â€â€š   Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ state.py
- Ã¢â€â€š   Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ interview_graph.py
- Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ rag/
- Ã¢â€â€š       Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ embeddings.py
- Ã¢â€â€š       Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ build_index.py
- Ã¢â€â€š       Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ retriever.py
- Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ data/
- Ã¢â€â€š   Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ questions.json
- Ã¢â€â€š   Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ faiss/
- Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ frontend/
- Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ scripts/
- Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ Dockerfile
- Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ .dockerignore
- Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ requirements.txt
- Ã¢â€Å“Ã¢â€â‚¬Ã¢â€â‚¬ .env.example
- Ã¢â€â€Ã¢â€â‚¬Ã¢â€â‚¬ README.md
+ ├── app/
+ │   ├── main.py
+ │   ├── accounts.py
+ │   ├── production_frontend.py
+ │   ├── interview_service.py
+ │   ├── judge.py
+ │   ├── aipipe.py
+ │   ├── starter_code.py
+ │   ├── question_store.py
+ │   ├── graph/
+ │   │   ├── state.py
+ │   │   └── interview_graph.py
+ │   └── rag/
+ │       ├── embeddings.py
+ │       ├── build_index.py
+ │       └── retriever.py
+ ├── data/
+ │   ├── questions.json
+ │   └── faiss/
+ ├── frontend/
+ ├── scripts/
+ ├── Dockerfile
+ ├── .dockerignore
+ ├── requirements.txt
+ ├── .env.example
+ └── README.md
 ```
 
-## Ã°Å¸Â§Â  Dataset
+## 🧠 Dataset
 
 | Company | Easy | Medium | Hard | Total |
 |---|---:|---:|---:|---:|
@@ -292,7 +266,7 @@ Each problem contains **5 test cases**, giving **300 total test cases**.
 
 Company labels are curated practice-targeting labels and do not claim that every exact problem was historically asked by that company.
 
-## Ã°Å¸â€â€™ Security Notes
+## 🔒 Security Notes
 
 - Passwords are hashed with **PBKDF2-HMAC-SHA256** and a unique salt.
 - JWT protects authenticated application sessions.
@@ -302,13 +276,13 @@ Company labels are curated practice-targeting labels and do not claim that every
 - The LLM provides hints/reports; **the deterministic judge decides correctness**.
 - Candidate code currently runs in local subprocesses, so production public use requires stronger isolation.
 
-## Ã°Å¸Å½Â¯ Interview Talking Point
+## 🎯 Interview Talking Point
 
-> **LangChain handles the RAG layer Ã¢â‚¬â€ document creation, FastEmbed embeddings, FAISS vector storage, metadata filtering, and semantic retrieval. LangGraph orchestrates the interview workflow Ã¢â‚¬â€ retrieval, deterministic code evaluation, contextual hint generation, and final AI reporting.**
+> **LangChain handles the RAG layer — document creation, FastEmbed embeddings, FAISS vector storage, metadata filtering, and semantic retrieval. LangGraph orchestrates the interview workflow — retrieval, deterministic code evaluation, contextual hint generation, and final AI reporting.**
 
-## Ã°Å¸â€œâ€ž License
+## 📄 License
 
-MIT Ã¢â‚¬â€ see [LICENSE](./LICENSE).
+MIT — see [LICENSE](./LICENSE).
 
 <div align="center">
 
